@@ -2,7 +2,7 @@
   <div class="row">
     <div class="cell">
       <div class="text_block">
-        <blockquote class="str_quote" cite="<?php echo $block['attribution']; ?>"><span><?php echo $block['quote']; ?></span></blockquote>
+        <?php echo $block['text']; ?>
       </div>
     </div>
   </div>

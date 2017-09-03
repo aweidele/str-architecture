@@ -29,6 +29,51 @@
 .text_block {
   max-width: 521px;
   margin: auto;
+  font-size: 16px;
+  line-height: 1.5em;
+}
+
+/* line 1, ../src/sass/_typography.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+
+/* line 6, ../src/sass/_typography.scss */
+p {
+  font-weight: 300;
+  margin-bottom: 1em;
+}
+
+/* line 11, ../src/sass/_typography.scss */
+h1 {
+  font-size: 36px;
+}
+
+/* line 15, ../src/sass/_typography.scss */
+h2 {
+  font-size: 24px;
+}
+
+/* line 19, ../src/sass/_typography.scss */
+h3 {
+  font-size: 21px;
+}
+
+/* line 23, ../src/sass/_typography.scss */
+h4 {
+  font-size: 18px;
+}
+
+/* line 27, ../src/sass/_typography.scss */
+h5 {
+  font-size: 16px;
+}
+
+/* line 31, ../src/sass/_typography.scss */
+h6 {
+  font-size: 14px;
+  text-transform: uppercase;
 }
 
 /* line 1, ../src/sass/_header.scss */
@@ -74,17 +119,16 @@
 
 /* line 1, ../src/sass/_quote.scss */
 .str_quote {
-  font-weight: 700;
+  font-weight: 600;
   font-size: 16px;
-  line-height: 24px;
   font-style: italic;
 }
-/* line 7, ../src/sass/_quote.scss */
+/* line 6, ../src/sass/_quote.scss */
 .str_quote span {
   display: block;
   margin-bottom: 1em;
 }
-/* line 12, ../src/sass/_quote.scss */
+/* line 11, ../src/sass/_quote.scss */
 .str_quote:after {
   content: "\2014 " attr(cite);
   display: block;

@@ -4,7 +4,7 @@ ENQUEUE SCRIPTS AND STYLES
 */
 function str_enqueue_styles() {
   wp_enqueue_style( 'str_fonts',
-      '//fonts.googleapis.com/css?family=Libre+Franklin:400,400i,700,700i|PT+Sans+Narrow:700'
+      '//fonts.googleapis.com/css?family=Libre+Franklin:300,300i,600,600i|PT+Sans+Narrow:700'
   );
 
   wp_enqueue_style( 'str_main_style',
