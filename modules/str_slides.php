@@ -57,8 +57,8 @@ $i++;
     <p class="str_slider_info_link">Project Info</p>
   </div>
   <div class="str_project_controls">
-    <div class="str_previous">Prev</div>
-    <div class="str_next">Next</div>
+    <div class="str_previous">Prev<svg viewbox="0 0 32 32"><use href="#arrow_left"></use></svg></div>
+    <div class="str_next">Next<svg viewbox="0 0 32 32"><use href="#arrow_right"></use></svg></div>
   </div>
   <div class="str_project_indicators">
 <?php for($i=0;$i<sizeof($slides);$i++) { ?>

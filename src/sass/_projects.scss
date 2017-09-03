@@ -49,16 +49,30 @@
 .str_next,
 .str_previous {
   width: 50px;
-  height: 50px;
+  height: 100%;
   position: absolute;
-  top: calc(50% - 25px);
+  top: 0;
+  text-indent: -999999px;
   cursor: pointer;
+
+  svg {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 .str_next {
   right: -50px;
+  svg {
+    left: 0;
+  }
 }
 .str_previous {
   left: -50px;
+  svg {
+    right: 0;
+  }
 }
 
 .str_project_indicators {
