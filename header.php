@@ -22,6 +22,26 @@ if (is_front_page()) {
   wp_title ( ' | ', true,'right' );
   echo get_bloginfo('name');
 } ?></title>
-  <?php wp_head(); ?>
+<?php
+  wp_head();
+  $logo = get_option('theme_logo');
+?>
 </head>
 <body>
+<header class="header">
+  <div class="row">
+    <div class="cell">
+      <h1 class="header_logo"><a href="<?php echo get_home_url(); ?>">
+        <span><?php echo get_bloginfo('name'); ?></span>
+        <img src="<?php echo $logo; ?>">
+      </a></h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="cell">
+      <nav class="main_nav">
+        <?php wp_nav_menu( array('theme_location' => 'primary-menu') ); ?>
+      </nav>
+    </div>
+  </div>
+</header>

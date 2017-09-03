@@ -1,0 +1,20 @@
+.main_nav {
+  max-width: 735px;
+  margin: auto;
+  font-family: 'PT Sans Narrow', Helvetica, Arial, Lucida, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: #000000 !important;
+  letter-spacing: 2px;
+  line-height: 1.4em;
+  text-align: center;
+}
+
+.menu-item {
+  display: inline-block;
+  a {
+    padding: 24px 11px;
+    text-decoration: none;
+    color: $black;
+  }
+}

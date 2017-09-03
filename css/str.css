@@ -1,10 +1,28 @@
-/* line 1, ../src/sass/main.scss */
-.main_logo {
-  max-width: 735px;
+/* line 1, ../src/sass/_structure.scss */
+.row {
+  max-width: 1200px;
   margin: auto;
 }
 
-/* line 6, ../src/sass/main.scss */
+/* line 1, ../src/sass/_header.scss */
+.header_logo {
+  max-width: 735px;
+  margin: auto;
+  overflow: hidden;
+}
+/* line 6, ../src/sass/_header.scss */
+.header_logo span {
+  position: absolute;
+  left: -999999px;
+}
+/* line 10, ../src/sass/_header.scss */
+.header_logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* line 1, ../src/sass/_navigation.scss */
 .main_nav {
   max-width: 735px;
   margin: auto;
@@ -17,23 +35,25 @@
   text-align: center;
 }
 
-/* line 18, ../src/sass/main.scss */
+/* line 13, ../src/sass/_navigation.scss */
 .menu-item {
   display: inline-block;
 }
-/* line 20, ../src/sass/main.scss */
+/* line 15, ../src/sass/_navigation.scss */
 .menu-item a {
   padding: 24px 11px;
+  text-decoration: none;
+  color: black;
 }
 
-/* line 25, ../src/sass/main.scss */
+/* line 1, ../src/sass/_projects.scss */
 .str_project {
   max-width: 1200px;
   margin: auto;
   position: relative;
 }
 
-/* line 31, ../src/sass/main.scss */
+/* line 7, ../src/sass/_projects.scss */
 .str_project_slider_container {
   position: relative;
   width: 100%;
@@ -41,7 +61,7 @@
   overflow: hidden;
 }
 
-/* line 38, ../src/sass/main.scss */
+/* line 14, ../src/sass/_projects.scss */
 .str_project_slider {
   width: 100%;
   height: 100%;
@@ -50,7 +70,7 @@
   left: 0;
 }
 
-/* line 46, ../src/sass/main.scss */
+/* line 22, ../src/sass/_projects.scss */
 .str_slide {
   width: 100%;
   height: 100%;
@@ -61,18 +81,18 @@
   -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
 }
-/* line 55, ../src/sass/main.scss */
+/* line 31, ../src/sass/_projects.scss */
 .str_slide.active {
   opacity: 1;
 }
 
-/* line 60, ../src/sass/main.scss */
+/* line 36, ../src/sass/_projects.scss */
 .str_slide_image {
   position: relative;
   width: 100%;
   height: 100%;
 }
-/* line 65, ../src/sass/main.scss */
+/* line 41, ../src/sass/_projects.scss */
 .str_slide_image img {
   height: 100%;
   width: auto;
@@ -80,7 +100,7 @@
   margin: auto;
 }
 
-/* line 73, ../src/sass/main.scss */
+/* line 49, ../src/sass/_projects.scss */
 .str_next,
 .str_previous {
   width: 50px;
@@ -91,22 +111,22 @@
   cursor: pointer;
 }
 
-/* line 81, ../src/sass/main.scss */
+/* line 57, ../src/sass/_projects.scss */
 .str_next {
   right: -50px;
 }
 
-/* line 84, ../src/sass/main.scss */
+/* line 60, ../src/sass/_projects.scss */
 .str_previous {
   left: -50px;
 }
 
-/* line 88, ../src/sass/main.scss */
+/* line 64, ../src/sass/_projects.scss */
 .str_project_indicators {
   text-align: center;
 }
 
-/* line 92, ../src/sass/main.scss */
+/* line 68, ../src/sass/_projects.scss */
 .str_indicator {
   width: 12px;
   height: 12px;
@@ -116,7 +136,7 @@
   position: relative;
   cursor: pointer;
 }
-/* line 101, ../src/sass/main.scss */
+/* line 77, ../src/sass/_projects.scss */
 .str_indicator:after {
   content: "";
   display: table;
@@ -130,11 +150,11 @@
   -webkit-transition: background 0.5s;
   transition: background 0.5s;
 }
-/* line 114, ../src/sass/main.scss */
+/* line 90, ../src/sass/_projects.scss */
 .str_indicator:hover:after {
   background: #3c0606;
 }
-/* line 118, ../src/sass/main.scss */
+/* line 94, ../src/sass/_projects.scss */
 .str_indicator.active:after {
   background: #c61515;
 }

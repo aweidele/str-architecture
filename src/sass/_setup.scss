@@ -1,0 +1,13 @@
+$black: #000000;
+$white: #FFFFFF;
+
+@mixin position_off {
+  position: absolute;
+  left: -999999px;
+}
+
+@mixin imgblock {
+  display: block;
+  width: 100%;
+  height: auto;
+}
