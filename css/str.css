@@ -15,7 +15,7 @@
 }
 
 /* line 16, ../src/sass/_setup.scss */
-.text_block {
+.typography {
   font-family: 'Libre Franklin', sans-serif;
 }
 
@@ -29,49 +29,45 @@
 .text_block {
   max-width: 521px;
   margin: auto;
-  font-size: 16px;
-  line-height: 1.5em;
 }
 
 /* line 1, ../src/sass/_typography.scss */
-h1, h2, h3, h4, h5, h6 {
+.typography {
+  font-size: 16px;
+  line-height: 1.5em;
+}
+/* line 6, ../src/sass/_typography.scss */
+.typography h1, .typography h2, .typography h3, .typography h4, .typography h5, .typography h6 {
   font-weight: 600;
   margin-bottom: 0.5em;
 }
-
-/* line 6, ../src/sass/_typography.scss */
-p {
+/* line 11, ../src/sass/_typography.scss */
+.typography p {
   font-weight: 300;
   margin-bottom: 1em;
 }
-
-/* line 11, ../src/sass/_typography.scss */
-h1 {
+/* line 16, ../src/sass/_typography.scss */
+.typography h1 {
   font-size: 36px;
 }
-
-/* line 15, ../src/sass/_typography.scss */
-h2 {
+/* line 20, ../src/sass/_typography.scss */
+.typography h2 {
   font-size: 24px;
 }
-
-/* line 19, ../src/sass/_typography.scss */
-h3 {
+/* line 24, ../src/sass/_typography.scss */
+.typography h3 {
   font-size: 21px;
 }
-
-/* line 23, ../src/sass/_typography.scss */
-h4 {
+/* line 28, ../src/sass/_typography.scss */
+.typography h4 {
   font-size: 18px;
 }
-
-/* line 27, ../src/sass/_typography.scss */
-h5 {
+/* line 32, ../src/sass/_typography.scss */
+.typography h5 {
   font-size: 16px;
 }
-
-/* line 31, ../src/sass/_typography.scss */
-h6 {
+/* line 36, ../src/sass/_typography.scss */
+.typography h6 {
   font-size: 14px;
   text-transform: uppercase;
 }
