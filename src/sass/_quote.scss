@@ -1,0 +1,17 @@
+.str_quote {
+  font-weight: $bold;
+  font-size: 16px;
+  line-height: 24px;
+  font-style: italic;
+
+  span {
+    display: block;
+    margin-bottom: 1em;
+  }
+
+  &:after {
+    content: "\2014 " attr(cite);
+    display: block;
+    font-style: normal;
+  }
+}

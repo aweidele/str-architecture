@@ -2,9 +2,9 @@
 get_header();
 if(have_posts()) : while(have_posts()) : the_post();
 $content = get_field('modules');
-?>
-<pre><?php print_r($content); ?></pre>
-<?php
+foreach($content as $block) {
+  include('modules/str-'.$block['acf_fc_layout'].'.php');
+}
 endwhile;
 endif;
 get_footer();

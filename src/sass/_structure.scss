@@ -1,4 +1,10 @@
 .row {
   max-width: 1200px;
-  margin: auto
+  margin: auto;
+}
+
+.text_block {
+  @extend %libre;
+  max-width: 521px;
+  margin: auto;
 }

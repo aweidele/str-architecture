@@ -1,5 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: 0;
+  box-sizing: border-box;
+}
+
 $black: #000000;
 $white: #FFFFFF;
+
+%pt_sans {
+  font-family: 'PT Sans Narrow', sans-serif;
+}
+
+%libre {
+  font-family: 'Libre Franklin', sans-serif;
+}
+
+$regular: 400;
+$bold: 700;
 
 @mixin position_off {
   position: absolute;

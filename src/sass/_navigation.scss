@@ -1,7 +1,7 @@
 .main_nav {
+  @extend %pt_sans;
   max-width: 735px;
   margin: auto;
-  font-family: 'PT Sans Narrow', Helvetica, Arial, Lucida, sans-serif;
   font-weight: bold;
   font-size: 16px;
   color: #000000 !important;

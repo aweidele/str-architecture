@@ -1,6 +1,33 @@
+/* line 1, ../src/sass/_setup.scss */
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 12, ../src/sass/_setup.scss */
+.main_nav {
+  font-family: 'PT Sans Narrow', sans-serif;
+}
+
+/* line 16, ../src/sass/_setup.scss */
+.text_block {
+  font-family: 'Libre Franklin', sans-serif;
+}
+
 /* line 1, ../src/sass/_structure.scss */
 .row {
   max-width: 1200px;
+  margin: auto;
+}
+
+/* line 6, ../src/sass/_structure.scss */
+.text_block {
+  max-width: 521px;
   margin: auto;
 }
 
@@ -26,7 +53,6 @@
 .main_nav {
   max-width: 735px;
   margin: auto;
-  font-family: 'PT Sans Narrow', Helvetica, Arial, Lucida, sans-serif;
   font-weight: bold;
   font-size: 16px;
   color: #000000 !important;
@@ -44,6 +70,25 @@
   padding: 24px 11px;
   text-decoration: none;
   color: black;
+}
+
+/* line 1, ../src/sass/_quote.scss */
+.str_quote {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  font-style: italic;
+}
+/* line 7, ../src/sass/_quote.scss */
+.str_quote span {
+  display: block;
+  margin-bottom: 1em;
+}
+/* line 12, ../src/sass/_quote.scss */
+.str_quote:after {
+  content: "\2014 " attr(cite);
+  display: block;
+  font-style: normal;
 }
 
 /* line 1, ../src/sass/_projects.scss */
