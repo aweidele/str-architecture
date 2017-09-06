@@ -12,7 +12,7 @@
   font-family: 'PT Sans Narrow', sans-serif;
 }
 
-.typography {
+.typography, .str_project_description {
   font-family: 'Libre Franklin', sans-serif;
 }
 
@@ -173,6 +173,10 @@
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+.str_next svg path,
+.str_previous svg path {
+  stroke: #81898d;
+}
 
 .str_next {
   right: -50px;
@@ -193,8 +197,8 @@
 }
 
 .str_indicator {
-  width: 12px;
-  height: 12px;
+  width: 8px;
+  height: 8px;
   display: inline-block;
   text-indent: -200%;
   overflow: hidden;
@@ -204,8 +208,8 @@
 .str_indicator:after {
   content: "";
   display: table;
-  width: 12px;
-  height: 12px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   background-color: #707070;
   position: absolute;
@@ -219,4 +223,9 @@
 }
 .str_indicator.active:after {
   background: #c61515;
+}
+
+.str_project_description {
+  font-size: 14px;
+  text-align: center;
 }

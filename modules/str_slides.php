@@ -52,7 +52,11 @@ $i++;
     </div>
   </div>
   <div class="str_project_description">
-    <h3><?php echo $str_project->post_title; ?></h3>
+
+<?php if($block_title) { ?>
+    <h3><?php echo $block_title; ?></h3>
+<?php } ?>
+
     <?php echo wpautop($block_description); ?>
     <p class="str_slider_info_link">Project Info</p>
   </div>

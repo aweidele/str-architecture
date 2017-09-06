@@ -60,6 +60,10 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+
+    path {
+      stroke: #81898d;
+    }
   }
 }
 .str_next {
@@ -80,8 +84,8 @@
 }
 
 .str_indicator {
-  width: 12px;
-  height: 12px;
+  width: 8px;
+  height: 8px;
   display: inline-block;
   text-indent: -200%;
   overflow: hidden;
@@ -91,8 +95,8 @@
   &:after {
     content: "";
     display: table;
-    width: 12px;
-    height: 12px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
     background-color: #707070;
     position: absolute;
@@ -108,4 +112,10 @@
   &.active:after {
       background: #c61515;
   }
+}
+
+.str_project_description {
+  @extend %libre;
+  font-size: 14px;
+  text-align: center;
 }
