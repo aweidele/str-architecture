@@ -1,5 +1,10 @@
 <?php
 /*
+ADVANCED CUSTOM FIELDS
+*/
+include_once('includes/custom-fields.php');
+
+/*
 ENQUEUE SCRIPTS AND STYLES
 */
 function str_enqueue_styles() {
