@@ -18,7 +18,7 @@ foreach($block_text_slides as $slide) {
   }
 
   if($slide['project_info_slide'] && !$jumpset) {
-    $jumpslide = $pos;
+    $jumpslide = $slide['slide_position'];
     $jumpset = true;
   }
 }
@@ -61,7 +61,9 @@ $i++;
 <?php } ?>
 
     <?php echo wpautop($block_description); ?>
+<?php if($jumpset) { ?>
     <p class="str_slider_info_link">Project Info</p>
+<?php } ?>
   </div>
   <div class="str_project_controls">
     <div class="str_previous">Prev<svg viewbox="0 0 32 32"><use href="#arrow_left"></use></svg></div>

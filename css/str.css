@@ -122,6 +122,9 @@
   margin: auto;
   position: relative;
 }
+.str_project:last-child {
+  margin-bottom: 100px;
+}
 
 .str_project_slider_container {
   position: relative;

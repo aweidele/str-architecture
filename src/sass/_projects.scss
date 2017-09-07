@@ -2,6 +2,10 @@
   max-width: 1200px;
   margin: auto;
   position: relative;
+  
+  &:last-child {
+    margin-bottom: 100px;
+  }
 }
 
 .str_project_slider_container {

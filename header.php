@@ -49,3 +49,4 @@ if (is_front_page()) {
     </div>
   </div>
 </header>
+<main>
