@@ -9,6 +9,10 @@
   line-height: 1.4em;
   text-align: center;
   padding-top: 28px;
+
+  ul {
+    list-style: none;
+  }
 }
 
 .menu-item {
@@ -17,5 +21,6 @@
     padding: 24px 11px;
     text-decoration: none;
     color: $black;
+    display: block;
   }
 }

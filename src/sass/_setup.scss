@@ -30,3 +30,12 @@ $bold: 600;
   width: 100%;
   height: auto;
 }
+
+@mixin clearfix {
+  &:after {
+    content: '';
+    display: table;
+    height: 0px;
+    clear: both;
+  }
+}
