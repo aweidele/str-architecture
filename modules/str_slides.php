@@ -5,14 +5,13 @@ $jumpset = false;
 $slides = array();
 foreach ($block_slides as $i => $slide) {
   $slide['type'] = 'image';
-  $slides[($i + 1) * 10] = $slide;
+  $slides[] = $slide;
 }
 foreach($block_text_slides as $slide) {
   $slide['type'] = 'text';
   if($slide['text'] != '') {
     if($slide['slide_position'] != '') {
-      $pos = (($slide['slide_position'] - 1) * 10) + 5;
-      $slides[$pos] = $slide;
+      array_splice($slides, $slide['slide_position'], 0, [$slide]);
     } else {
       $slides[] = $slide;
     }
@@ -23,7 +22,6 @@ foreach($block_text_slides as $slide) {
     $jumpset = true;
   }
 }
-ksort($slides);
 ?>
 <section class="str_project">
   <div class="str_project_slider_container">
