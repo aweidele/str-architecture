@@ -2,7 +2,7 @@
   max-width: 1200px;
   margin: auto;
   position: relative;
-  
+
   &:last-child {
     margin-bottom: 100px;
   }
@@ -52,6 +52,9 @@
 
 .str_slide_text {
   padding: 50px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 
   @media screen and (min-width: 1000px) {
     padding: 100px;
