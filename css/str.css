@@ -121,6 +121,7 @@
   max-width: 1200px;
   margin: auto;
   position: relative;
+  margin-bottom: 50px;
 }
 .str_project:last-child {
   margin-bottom: 100px;
