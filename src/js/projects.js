@@ -40,11 +40,15 @@ $(document).ready(function() {
     $('.str_slide',str_this_slider).removeClass('active');
     $('.str_slide:eq('+str_current+')',str_this_slider).addClass('active');
 
+    $('.str_indicator',str_indicator).removeClass('active');
+    $('.str_indicator:eq('+str_current+')',str_indicator).addClass('active');
+
     console.log(str_infoslide);
 
     $(this).parents('.str_project').data('current',str_current);
   });
 
+  /*** THE INDICATOR ACTION ***/
   $('.str_indicator').on('click',function() {
     var str_current = $(this).index();
     var str_this_slider = $(this).parent().siblings('.str_project_slider_container');
