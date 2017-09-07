@@ -123,6 +123,9 @@
   position: relative;
   margin-bottom: 50px;
 }
+.str_project:first-child {
+  margin-top: 50px;
+}
 .str_project:last-child {
   margin-bottom: 100px;
 }
@@ -191,6 +194,9 @@
     font-size: 21px;
   }
 }
+.str_slide_text .typography p {
+  line-height: 1.24em;
+}
 
 .str_next,
 .str_previous {
@@ -255,10 +261,11 @@
 }
 .str_project_indicators {
   text-align: center;
+  padding: 6px 0 12px;
 }
 
 .str_indicator {
-  width: 8px;
+  width: 16px;
   height: 8px;
   display: inline-block;
   text-indent: -200%;
@@ -289,4 +296,21 @@
 .str_project_description {
   font-size: 14px;
   text-align: center;
+  font-size: 14px;
+}
+.str_project_description h3 {
+  font-size: 14px;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 1em;
+}
+.str_project_description p {
+  font-size: 14px;
+  font-style: italic;
+  margin-bottom: 0.4em;
+}
+.str_project_description p.str_slider_info_link {
+  font-style: normal;
+  text-decoration: underline;
+  cursor: pointer;
 }
