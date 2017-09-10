@@ -29,6 +29,9 @@ add_action( 'wp_enqueue_scripts', 'str_enqueue_styles' );
 ADD IMAGE SIZES
 */
 add_image_size('STR Slider',999999,650);
+add_image_size('image_module_content',521,9999999);
+add_image_size('image_module_medium',860,9999999);
+add_image_size('image_module_full',1200,9999999);
 
 /*
 ADD MENUS

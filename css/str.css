@@ -12,7 +12,7 @@
   font-family: 'PT Sans Narrow', sans-serif;
 }
 
-.typography, .str_project_description {
+.typography, .str_project_description, .image_caption {
   font-family: 'Libre Franklin', sans-serif;
 }
 
@@ -313,4 +313,37 @@
   font-style: normal;
   text-decoration: underline;
   cursor: pointer;
+}
+
+.image_cell_content {
+  max-width: 521px;
+}
+
+.image_cell_medium {
+  max-width: 860px;
+}
+
+.image_cell_full {
+  width: 100%;
+}
+
+.image_cell_content, .image_cell_medium, .image_cell_full {
+  margin: auto;
+}
+
+.image_figure {
+  margin-bottom: 50px;
+}
+
+.image_cell_image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 1em;
+}
+
+.image_caption {
+  font-size: 14px;
+  font-style: italic;
+  margin-bottom: 0.4em;
 }
