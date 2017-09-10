@@ -558,7 +558,7 @@ acf_add_local_field_group(array (
 					),
 					'default_value' => '',
 					'tabs' => 'all',
-					'toolbar' => 'basic',
+					'toolbar' => 'full',
 					'media_upload' => 1,
 					'delay' => 0,
 				),
