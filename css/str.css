@@ -12,7 +12,7 @@
   font-family: 'PT Sans Narrow', sans-serif;
 }
 
-.typography, .str_project_description, .image_caption {
+.typography, .str_project_description, .image_caption, .contact_block {
   font-family: 'Libre Franklin', sans-serif;
 }
 
@@ -346,4 +346,35 @@
   font-size: 14px;
   font-style: italic;
   margin-bottom: 0.4em;
+}
+
+.contact_block {
+  text-align: center;
+  font-size: 19px;
+}
+.contact_block p {
+  margin-bottom: 1em;
+}
+@media screen and (min-width: 820px) {
+  .contact_block {
+    font-size: 24px;
+  }
+}
+.contact_block a {
+  color: black;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 721px) {
+  .phone_span + .phone_span:before {
+    content: "|";
+    display: inline-block;
+    margin: 0 15px 0 10px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .address_span, .phone_span {
+    display: block;
+    margin-bottom: 0.25em;
+  }
 }
