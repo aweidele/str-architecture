@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: 0;
+  box-sizing: border-box;
+}
+
+$black: #000000;
+$white: #FFFFFF;
+
+%pt_sans {
+  font-family: 'PT Sans Narrow', sans-serif;
+}
+
+%libre {
+  font-family: 'Libre Franklin', sans-serif;
+}
+
+$regular: 300;
+$bold: 600;
+
+@mixin position_off {
+  position: absolute;
+  left: -999999px;
+}
+
+@mixin imgblock {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@mixin clearfix {
+  &:after {
+    content: '';
+    display: table;
+    height: 0px;
+    clear: both;
+  }
+}

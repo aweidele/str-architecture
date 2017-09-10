@@ -1,0 +1,202 @@
+.str_project {
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+  margin-bottom: 50px;
+
+  &:first-child {
+    margin-top: 50px;
+  }
+
+  &:last-child {
+    margin-bottom: 100px;
+  }
+}
+
+.str_project_slider_container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 54%;
+  overflow: hidden;
+}
+
+.str_project_slider {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.str_slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s;
+
+  &.active {
+    opacity: 1;
+  }
+}
+
+.str_slide_image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  img {
+    height: 100%;
+    width: auto;
+    display: block;
+    margin: auto;
+  }
+}
+
+.str_slide_text {
+  padding: 50px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+
+  @media screen and (min-width: 1000px) {
+    padding: 100px;
+  }
+
+  .typography {
+
+    p,h2,h3,h4,h5,h6 {
+      @media screen and (max-width: 800px) {
+        font-size: 12px;
+      }
+      @media screen and (min-width: 1000px) {
+        font-size: 21px;
+      }
+    }
+
+    p {
+      line-height: 1.24em;
+    }
+  }
+}
+
+.str_next,
+.str_previous {
+  width: 50px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  text-indent: -999999px;
+  cursor: pointer;
+
+  svg {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+
+    @media screen and (min-width: 800px) {
+      width: 32px;
+      height: 32px;
+    }
+
+    path {
+      stroke: #81898d;
+    }
+  }
+}
+
+.str_next {
+  right: 0px;
+  svg {
+    left: 10px;
+  }
+}
+.str_previous {
+  left: 0px;
+  svg {
+    right: 10px;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+
+  .str_next {
+    right: -50px;
+    svg {
+      left: 0;
+    }
+  }
+  .str_previous {
+    left: -50px;
+    svg {
+      right: 0;
+    }
+  }
+}
+
+.str_project_indicators {
+  text-align: center;
+  padding: 6px 0 12px;
+}
+
+.str_indicator {
+  width: 16px;
+  height: 8px;
+  display: inline-block;
+  text-indent: -200%;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+
+  &:after {
+    content: "";
+    display: table;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #707070;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: background 0.5s;
+  }
+
+  &:hover:after {
+      background: darken(#c61515,30);
+  }
+
+  &.active:after {
+      background: #c61515;
+  }
+}
+
+.str_project_description {
+  @extend %libre;
+  font-size: 14px;
+  text-align: center;
+  font-size: 14px;
+
+  h3 {
+    font-size: 14px;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+  }
+
+  p {
+    font-size: 14px;
+    font-style: italic;
+    margin-bottom: 0.4em;
+
+    &.str_slider_info_link {
+      font-style: normal;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}
