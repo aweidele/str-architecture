@@ -1,5 +1,6 @@
 var $ = jQuery;
 $(document).ready(function() {
+  var swiped = false;
 
   $('.str_project').each(function() {
     $(this).data('current',0);
@@ -26,7 +27,6 @@ $(document).ready(function() {
     $('.str_indicator:eq('+str_current+')',str_indicator).addClass('active');
 
     $(this).parents('.str_project').data('current',str_current);
-    console.log(str_current+'/'+str_slider_length);
   });
 
   /*** THE PROJECT INFO LINK ***/
@@ -42,8 +42,6 @@ $(document).ready(function() {
 
     $('.str_indicator',str_indicator).removeClass('active');
     $('.str_indicator:eq('+str_current+')',str_indicator).addClass('active');
-
-    console.log(str_infoslide);
 
     $(this).parents('.str_project').data('current',str_current);
   });
@@ -73,8 +71,10 @@ $(document).ready(function() {
       // DETERMINE THE DIRECTION, GO FORWARD FOR LEFT, BACKWARD FOR RIGHT
       if(direction == 'right') {
         str_current--;
+        swiped = true;
       } else if(direction == 'left')  {
         str_current++;
+        swiped = true;
       }
 
       if(str_current < 0) {
@@ -90,9 +90,30 @@ $(document).ready(function() {
       $('.str_indicator:eq('+str_current+')',str_indicator).addClass('active');
 
       $(this).parents('.str_project').data('current',str_current);
-
-      console.log(str_slider_length);
-      console.log("You swiped " + direction );
     }
-  } );
+  }
+
+  /*** CLICK ACTION ***/
+  ).on('click',function(){
+    if(!swiped) {
+      var str_current = $(this).parents('.str_project').data('current');
+      var str_this_slider = $(this).parent();
+      var str_indicator = $(this).parent().siblings('.str_project_indicators');
+      var str_slider_length = $('.str_slide',this).length;
+
+      str_current++;
+      if (str_current >= str_slider_length) {
+        str_current = 0;
+      }
+
+      $('.str_slide',str_this_slider).removeClass('active');
+      $('.str_slide:eq('+str_current+')',str_this_slider).addClass('active');
+
+      $('.str_indicator',str_indicator).removeClass('active');
+      $('.str_indicator:eq('+str_current+')',str_indicator).addClass('active');
+
+      $(this).parents('.str_project').data('current',str_current);
+    }
+    swiped = false;
+  });
 });
