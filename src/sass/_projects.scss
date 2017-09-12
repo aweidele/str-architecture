@@ -91,6 +91,10 @@
   text-indent: -999999px;
   cursor: pointer;
 
+  @media screen and (max-width: 640px) {
+    display: none;
+  }
+
   svg {
     display: block;
     position: absolute;
