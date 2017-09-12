@@ -133,8 +133,13 @@
 .str_project_slider_container {
   position: relative;
   width: 100%;
-  padding-bottom: 54%;
+  padding-bottom: 70%;
   overflow: hidden;
+}
+@media screen and (min-width: 700px) {
+  .str_project_slider_container {
+    padding-bottom: 60%;
+  }
 }
 
 .str_project_slider {
@@ -271,7 +276,7 @@
 }
 
 .str_indicator {
-  width: 16px;
+  width: 9px;
   height: 8px;
   display: inline-block;
   text-indent: -200%;
@@ -297,6 +302,11 @@
 }
 .str_indicator.active:after {
   background: #c61515;
+}
+@media screen and (min-width: 700px) {
+  .str_indicator {
+    width: 16px;
+  }
 }
 
 .str_project_description {

@@ -16,8 +16,12 @@
 .str_project_slider_container {
   position: relative;
   width: 100%;
-  padding-bottom: 54%;
+  padding-bottom: 70%;
   overflow: hidden;
+
+  @media screen and (min-width: 700px) {
+    padding-bottom: 60%;
+  }
 }
 
 .str_project_slider {
@@ -149,7 +153,7 @@
 }
 
 .str_indicator {
-  width: 16px;
+  width: 9px;
   height: 8px;
   display: inline-block;
   text-indent: -200%;
@@ -176,6 +180,10 @@
 
   &.active:after {
       background: #c61515;
+  }
+
+  @media screen and (min-width: 700px) {
+    width: 16px;
   }
 }
 
