@@ -16,6 +16,13 @@ function str_enqueue_styles() {
       get_stylesheet_directory_uri() . '/css/str.css'
   );
 
+  wp_enqueue_script( 'touchSwipe',
+      get_stylesheet_directory_uri() . '/js/jquery.touchSwipe.min.js',
+      array('jquery'),
+      wp_get_theme()->get('Version'),
+      true
+  );
+
   wp_enqueue_script( 'str_main_script',
       get_stylesheet_directory_uri() . '/js/str.js',
       array('jquery'),

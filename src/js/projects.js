@@ -61,4 +61,38 @@ $(document).ready(function() {
 
     $(this).parents('.str_project').data('current',str_current);
   });
+
+  /*** SWIPE ACTION ***/
+  $('.str_project_slider').swipe( {
+    swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+      var str_current = $(this).parents('.str_project').data('current');
+      var str_this_slider = $(this).parent();
+      var str_indicator = $(this).parent().siblings('.str_project_indicators');
+      var str_slider_length = $('.str_slide',this).length;
+
+      // DETERMINE THE DIRECTION, GO FORWARD FOR LEFT, BACKWARD FOR RIGHT
+      if(direction == 'right') {
+        str_current--;
+      } else if(direction == 'left')  {
+        str_current++;
+      }
+
+      if(str_current < 0) {
+        str_current = str_slider_length - 1;
+      } else if (str_current >= str_slider_length) {
+        str_current = 0;
+      }
+
+      $('.str_slide',str_this_slider).removeClass('active');
+      $('.str_slide:eq('+str_current+')',str_this_slider).addClass('active');
+
+      $('.str_indicator',str_indicator).removeClass('active');
+      $('.str_indicator:eq('+str_current+')',str_indicator).addClass('active');
+
+      $(this).parents('.str_project').data('current',str_current);
+
+      console.log(str_slider_length);
+      console.log("You swiped " + direction );
+    }
+  } );
 });
