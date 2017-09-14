@@ -170,9 +170,13 @@
   height: 100%;
 }
 .str_slide_image img {
+  height: auto;
+  width: 100%;
+  display: block;
+}
+.str_slide_image.str_slide_portrait img {
   height: 100%;
   width: auto;
-  display: block;
   margin: auto;
 }
 

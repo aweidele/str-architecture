@@ -28,11 +28,14 @@ foreach($block_text_slides as $slide) {
     <div class="str_project_slider">
 <?php
 $i = 0;
-foreach($slides as $j => $slide) { ?>
+foreach($slides as $j => $slide) {
+  $orientation = get_field('orientation',$slide['ID']);
+  $size = 'STR Slider' . ($orientation == 'portrait' ? ' Portrait' : '');
+  ?>
       <div class="str_slide<?php echo !$i ? ' active' : ''; ?><?php echo $j == $jumpslide ? ' project_info' : ''; ?>">
         <?php if($slide[type] == 'image') { ?>
-          <div class="str_slide_image">
-            <img src="<?php echo $slide['sizes']['STR Slider']; ?>">
+          <div class="str_slide_image<?php echo $orientation == 'portrait' ? ' str_slide_portrait' : ''; ?>">
+            <img src="<?php echo $slide['sizes'][$size]; ?>">
           </div>
         <?php } else { ?>
           <div class="str_slide_text">

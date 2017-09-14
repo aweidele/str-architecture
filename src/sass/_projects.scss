@@ -52,10 +52,17 @@
   height: 100%;
 
   img {
-    height: 100%;
-    width: auto;
+    height: auto;
+    width: 100%;
     display: block;
-    margin: auto;
+  }
+
+  &.str_slide_portrait {
+    img {
+      height: 100%;
+      width: auto;
+      margin: auto;
+    }
   }
 }
 
