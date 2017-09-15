@@ -35,7 +35,7 @@ add_action( 'wp_enqueue_scripts', 'str_enqueue_styles' );
 /*
 ADD IMAGE SIZES
 */
-add_image_size('STR Slider',1200,840);
+add_image_size('STR Slider',1075,840);
 add_image_size('STR Slider Portrait',999999,840);
 add_image_size('image_module_content',521,9999999);
 add_image_size('image_module_medium',860,9999999);
