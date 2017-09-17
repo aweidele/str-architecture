@@ -118,7 +118,17 @@ $(document).ready(function() {
   });
 
   /*** BACK TO TOP ***/
-  $('.back_to_top').on('click',function() {
+  $(window).on('scroll',function() {
+    t = $(window).scrollTop();
+    if(t > 10) {
+      $('.back_to_top').addClass('scrolled');
+    } else {
+      $('.back_to_top').removeClass('scrolled');
+    }
+  });
+
+  $('.back_to_top').on('click',function(e) {
+    e.preventDefault();
     $("html, body").animate({ scrollTop: "0" }, 500);
   });
 
