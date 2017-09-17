@@ -132,4 +132,15 @@ $(document).ready(function() {
     $("html, body").animate({ scrollTop: "0" }, 500);
   });
 
+
+  /*** OPEN ALL LINKS IN NEW WINDOW ***/
+  $('.text_block a, .str_slide_text a').on('click',(function(e) {
+    if( !$(this).hasClass('str_slide_download') ) {
+      e.preventDefault();
+      h = $(this).attr('href');
+      window.open(h);
+    }
+
+  }));
+
 });
