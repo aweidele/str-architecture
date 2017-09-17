@@ -116,4 +116,10 @@ $(document).ready(function() {
     }
     swiped = false;
   });
+
+  /*** BACK TO TOP ***/
+  $('.back_to_top').on('click',function() {
+    $("html, body").animate({ scrollTop: "0" }, 500);
+  });
+
 });

@@ -12,7 +12,7 @@
   font-family: 'PT Sans Narrow', sans-serif;
 }
 
-.typography, .str_project_description, .image_caption, .contact_block {
+.typography, .str_project_description, .image_caption, .contact_block, .back_to_top {
   font-family: 'Libre Franklin', sans-serif;
 }
 
@@ -86,7 +86,6 @@
   letter-spacing: 2px;
   line-height: 1.4em;
   text-align: center;
-  padding-top: 28px;
 }
 .main_nav ul {
   list-style: none;
@@ -398,4 +397,34 @@
     display: block;
     margin-bottom: 0.25em;
   }
+}
+.back_to_top {
+  width: 70px;
+  height: 70px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 10px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.back_to_top span {
+  display: block;
+  padding: 0 10px;
+  position: relative;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.back_to_top svg {
+  width: 16px;
+  height: 16px;
+  fill: #FFFFFF;
+  display: block;
+  margin: auto;
 }

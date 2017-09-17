@@ -1,0 +1,33 @@
+.back_to_top {
+  @extend %libre;
+  width: 70px;
+  height: 70px;
+
+  position: fixed;
+  bottom: 0;
+  right: 0;
+
+  background: rgba(0,0,0,0.5);
+  color: $white;
+  font-size: 10px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  span {
+    display: block;
+    padding: 0 10px;
+    position: relative;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+
+  svg {
+    width: 16px;
+    height: 16px;
+    fill: #FFFFFF;
+    display: block;
+    margin: auto;
+  }
+}
