@@ -36,6 +36,9 @@ foreach($slides as $j => $slide) {
         <?php if($slide[type] == 'image') { ?>
           <div class="str_slide_image<?php echo $orientation == 'portrait' ? ' str_slide_portrait' : ''; ?>">
             <img src="<?php echo $slide['sizes'][$size]; ?>">
+            <a href="<?php echo $slide['url']; ?>" class="str_slide_download" target="_blank">
+              <svg viewbox="0 0 32 32" class="icon-download"><use href="#download"></use></svg>
+              <?php _e('Download Image'); ?></a>
           </div>
         <?php } else { ?>
           <div class="str_slide_text">

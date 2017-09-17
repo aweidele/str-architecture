@@ -2,7 +2,7 @@
 <footer>
   <a class="back_to_top" href="#">
     <span><svg viewbox="0 0 32 32"><use href="#arrow_up"></use></svg>
-      <span>Back To Top</span>
+      <span><?php _e('Back To Top'); ?></span>
     </span>
   </a>
 </footer>

@@ -46,9 +46,11 @@
   left: 0;
   opacity: 0;
   transition: opacity 0.5s;
+  z-index: 0;
 
   &.active {
     opacity: 1;
+    z-index: 1;
   }
 }
 
@@ -70,6 +72,44 @@
       margin: auto;
     }
   }
+}
+
+.str_slide_download {
+  @extend %libre;
+  height: 34px;
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+
+  background: rgba(0,0,0,0.7);
+  color: #FFFFFF;
+  display: inline-block;
+  font-size: 10px;
+  opacity: 0;
+  padding: 5px 20px 11px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transform: translateX(-50%);
+  transition: opacity 0.5s;
+  z-index: 10;
+
+  .str_slide:hover & {
+    opacity: 1;
+  }
+
+  @media screen and (max-width: 640px) {
+    display: none;
+  }
+}
+
+.icon-download {
+  fill: #ffffff;
+  width: 16px;
+  height: 16px;
+  position: relative;
+  top: 2px;
+  display: inline-block;
+  margin-right: 5px;
 }
 
 .str_slide_text {
