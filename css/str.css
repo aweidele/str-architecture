@@ -183,17 +183,11 @@
 }
 
 .str_slide_text {
-  padding: 50px;
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-}
-@media screen and (min-width: 1000px) {
-  .str_slide_text {
-    padding: 100px;
-  }
 }
 @media screen and (max-width: 800px) {
   .str_slide_text .typography p, .str_slide_text .typography h2, .str_slide_text .typography h3, .str_slide_text .typography h4, .str_slide_text .typography h5, .str_slide_text .typography h6 {
