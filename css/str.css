@@ -143,6 +143,11 @@
     padding-bottom: 60%;
   }
 }
+@media screen and (min-width: 700px) and (max-height: 825px) {
+  .str_project_slider_container {
+    padding-bottom: 43%;
+  }
+}
 
 .str_project_slider {
   width: 100%;
