@@ -135,12 +135,11 @@ $(document).ready(function() {
 
   /*** OPEN ALL LINKS IN NEW WINDOW ***/
   $('.text_block a, .str_slide_text a').on('click',(function(e) {
-    if( !$(this).hasClass('str_slide_download') ) {
+    h = $(this).attr('href');
+    if( !h.startsWith('mailto:') ) {
       e.preventDefault();
-      h = $(this).attr('href');
       window.open(h);
     }
-
   }));
 
 });
