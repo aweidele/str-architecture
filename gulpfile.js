@@ -15,9 +15,9 @@ var autoprefixerOptions = {
 gulp.task('sass', function(){
   return gulp
     .src('src/sass/str.scss')
-    //.pipe(sourcemaps.init())
+    .pipe(sourcemaps.init())
     .pipe(sass(sassOptions).on('error', sass.logError))
-    //.pipe(sourcemaps.write())
+    .pipe(sourcemaps.write())
     .pipe(autoprefixer(autoprefixerOptions))
     .pipe(gulp.dest('css/'))
 });
