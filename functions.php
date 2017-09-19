@@ -16,6 +16,13 @@ function str_enqueue_styles() {
       get_stylesheet_directory_uri() . '/css/str.css'
   );
 
+  wp_enqueue_script( 'touchSwipe',
+      get_stylesheet_directory_uri() . '/js/jquery.touchSwipe.min.js',
+      array('jquery'),
+      wp_get_theme()->get('Version'),
+      true
+  );
+
   wp_enqueue_script( 'str_main_script',
       get_stylesheet_directory_uri() . '/js/str.js',
       array('jquery'),
@@ -28,7 +35,11 @@ add_action( 'wp_enqueue_scripts', 'str_enqueue_styles' );
 /*
 ADD IMAGE SIZES
 */
-add_image_size('STR Slider',999999,650);
+add_image_size('STR Slider',1075,840);
+add_image_size('STR Slider Portrait',999999,840);
+add_image_size('image_module_content',521,9999999);
+add_image_size('image_module_medium',860,9999999);
+add_image_size('image_module_full',1200,9999999);
 
 /*
 ADD MENUS
