@@ -97,11 +97,12 @@ function mytheme_customize_register( $wp_customize ) {
 	$wp_customize->add_setting( 'theme_logo'    , array('transport' => 'refresh','type' => 'option'));
 
   /// ADD CONTROLS
-  $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'theme_logo', array(
-    'label' => 'Upload Logo',
+  $wp_customize->add_control( 'theme_logo', array(
+    'type' => 'textarea',
+    'label' => 'Paste SVG Logo',
     'section' => 'title_tagline',
     'settings' => 'theme_logo',
-  ) ) );
+  ) );
 
 }
 add_action( 'customize_register', 'mytheme_customize_register' );
