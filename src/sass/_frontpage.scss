@@ -1,0 +1,19 @@
+.body_frontpage {
+  background: $black;
+  color: $white;
+
+  footer {
+    height: auto;
+  }
+}
+
+.frontpage_sketch {
+  height: calc(100vh - 196px);
+
+  overflow: hidden;
+  position: relative;
+
+  img {
+    @include imgblock;
+  }
+}
