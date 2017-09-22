@@ -24,7 +24,7 @@ function str_enqueue_styles() {
   );
 
   wp_enqueue_script( 'str_main_script',
-      get_stylesheet_directory_uri() . '/js/projects.js',
+      get_stylesheet_directory_uri() . '/js/str.js',
       array('jquery'),
       wp_get_theme()->get('Version'),
       true

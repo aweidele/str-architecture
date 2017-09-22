@@ -27,7 +27,7 @@ $(document).ready(function() {
     $('.str_indicator',str_indicator).removeClass('active');
     $('.str_indicator:eq('+str_current+')',str_indicator).addClass('active');
 
-    $('.str_project_indicator_current',str_indicator_mobile).text(str_current);
+    $('.str_project_indicator_current',str_indicator_mobile).text(str_current + 1);
 
     $(this).parents('.str_project').data('current',str_current);
   });
@@ -47,7 +47,7 @@ $(document).ready(function() {
     $('.str_indicator',str_indicator).removeClass('active');
     $('.str_indicator:eq('+str_current+')',str_indicator).addClass('active');
 
-    $('.str_project_indicator_current',str_indicator_mobile).text(str_current);
+    $('.str_project_indicator_current',str_indicator_mobile).text(str_current + 1);
 
     $(this).parents('.str_project').data('current',str_current);
   });
@@ -64,7 +64,7 @@ $(document).ready(function() {
     $(this).siblings('.str_indicator').removeClass('active');
     $(this).addClass('active');
 
-    $('.str_project_indicator_current',str_indicator_mobile).text(str_current);
+    $('.str_project_indicator_current',str_indicator_mobile).text(str_current + 1);
 
     $(this).parents('.str_project').data('current',str_current);
   });
@@ -99,7 +99,7 @@ $(document).ready(function() {
       $('.str_indicator',str_indicator).removeClass('active');
       $('.str_indicator:eq('+str_current+')',str_indicator).addClass('active');
 
-      $('.str_project_indicator_current',str_indicator_mobile).text(str_current);
+      $('.str_project_indicator_current',str_indicator_mobile).text(str_current + 1);
 
       $(this).parents('.str_project').data('current',str_current);
     }
@@ -125,7 +125,7 @@ $(document).ready(function() {
       $('.str_indicator',str_indicator).removeClass('active');
       $('.str_indicator:eq('+str_current+')',str_indicator).addClass('active');
 
-      $('.str_project_indicator_current',str_indicator_mobile).text(str_current);
+      $('.str_project_indicator_current',str_indicator_mobile).text(str_current + 1);
 
       $(this).parents('.str_project').data('current',str_current);
     }
