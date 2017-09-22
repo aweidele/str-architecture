@@ -60,6 +60,9 @@ $i++;
     <div class="str_indicator<?php echo !$i ? ' active' : ''; ?>"><?php echo $i; ?></div>
 <?php } ?>
   </div>
+  <div class="str_project_indicator_mobile">
+    <span class="str_project_indicator_current">1</span> / <?php echo sizeof($slides); ?>
+  </div>
   <div class="str_project_description">
 
 <?php if($block_title) { ?>

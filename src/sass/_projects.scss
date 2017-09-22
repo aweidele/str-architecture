@@ -210,7 +210,7 @@
 }
 
 .str_indicator {
-  width: 9px;
+  width: 16px;
   height: 8px;
   display: inline-block;
   text-indent: -200%;
@@ -239,8 +239,8 @@
       background: #c61515;
   }
 
-  @media screen and (min-width: 700px) {
-    width: 16px;
+  @media screen and (max-width: 700px) {
+    display: none;
   }
 }
 
@@ -267,5 +267,18 @@
       text-decoration: underline;
       cursor: pointer;
     }
+  }
+}
+
+.str_project_indicator_mobile {
+  @extend %libre;
+  color: #c61515;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 0.5em 0 1em;
+  text-align: center;
+
+  @media screen and (min-width: 700px) {
+    display: none;
   }
 }

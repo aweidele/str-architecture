@@ -11,6 +11,7 @@ $(document).ready(function() {
     var str_current = $(this).parents('.str_project').data('current');
     var str_this_slider = $(this).parent().siblings('.str_project_slider_container');
     var str_indicator = $(this).parent().siblings('.str_project_indicators');
+    var str_indicator_mobile = $(this).parent().siblings('.str_project_indicator_mobile');
     var str_slider_length = $('.str_slide',str_this_slider).length;
 
     str_current += $(this).index() ? 1 : -1;
@@ -26,6 +27,8 @@ $(document).ready(function() {
     $('.str_indicator',str_indicator).removeClass('active');
     $('.str_indicator:eq('+str_current+')',str_indicator).addClass('active');
 
+    console.log('?');
+
     $(this).parents('.str_project').data('current',str_current);
   });
 
@@ -34,6 +37,7 @@ $(document).ready(function() {
     var str_current = $(this).parents('.str_project').data('current');
     var str_this_slider = $(this).parent().siblings('.str_project_slider_container');
     var str_indicator = $(this).parent().siblings('.str_project_indicators');
+    var str_indicator_mobile = $(this).parent().siblings('.str_project_indicator_mobile');
     var str_infoslide = $('.str_slide.project_info',str_this_slider);
 
     str_current = str_infoslide.index();
@@ -50,6 +54,7 @@ $(document).ready(function() {
   $('.str_indicator').on('click',function() {
     var str_current = $(this).index();
     var str_this_slider = $(this).parent().siblings('.str_project_slider_container');
+    var str_indicator_mobile = $(this).parent().siblings('.str_project_indicator_mobile');
 
     $('.str_slide',str_this_slider).removeClass('active');
     $('.str_slide:eq('+str_current+')',str_this_slider).addClass('active');
@@ -66,6 +71,7 @@ $(document).ready(function() {
       var str_current = $(this).parents('.str_project').data('current');
       var str_this_slider = $(this).parent();
       var str_indicator = $(this).parent().siblings('.str_project_indicators');
+      var str_indicator_mobile = $(this).parent().siblings('.str_project_indicator_mobile');
       var str_slider_length = $('.str_slide',this).length;
 
       // DETERMINE THE DIRECTION, GO FORWARD FOR LEFT, BACKWARD FOR RIGHT
@@ -99,6 +105,7 @@ $(document).ready(function() {
       var str_current = $(this).parents('.str_project').data('current');
       var str_this_slider = $(this).parent();
       var str_indicator = $(this).parent().siblings('.str_project_indicators');
+      var str_indicator_mobile = $(this).parent().siblings('.str_project_indicator_mobile');
       var str_slider_length = $('.str_slide',this).length;
 
       str_current++;
