@@ -27,7 +27,7 @@ $(document).ready(function() {
     $('.str_indicator',str_indicator).removeClass('active');
     $('.str_indicator:eq('+str_current+')',str_indicator).addClass('active');
 
-    console.log('?');
+    console.log('weeeeeeee!!!');
 
     $(this).parents('.str_project').data('current',str_current);
   });
