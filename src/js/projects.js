@@ -8,6 +8,7 @@ $(document).ready(function() {
 
   /*** NEXT AND PREVIOUS BUTTONS ***/
   $('.str_previous,.str_next').on('click',function() {
+    console.log('weeeeeeee!!!');
     var str_current = $(this).parents('.str_project').data('current');
     var str_this_slider = $(this).parent().siblings('.str_project_slider_container');
     var str_indicator = $(this).parent().siblings('.str_project_indicators');
@@ -26,8 +27,6 @@ $(document).ready(function() {
 
     $('.str_indicator',str_indicator).removeClass('active');
     $('.str_indicator:eq('+str_current+')',str_indicator).addClass('active');
-
-    console.log('weeeeeeee!!!');
 
     $(this).parents('.str_project').data('current',str_current);
   });
