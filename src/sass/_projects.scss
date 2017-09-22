@@ -62,7 +62,11 @@
   img {
     height: auto;
     width: 100%;
+    position: relative;
+    top: 50%;
+
     display: block;
+    transform: translateY(-50%);
   }
 
   &.str_slide_portrait {
