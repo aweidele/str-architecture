@@ -8,7 +8,6 @@ foreach ($block_slides as $i => $slide) {
   $slides[] = $slide;
 }
 foreach($block_text_slides as $slide) {
-  echo "<pre>",print_r($slide),"</pre>";
   $slide['type'] = 'text';
   if($slide['text'] != '') {
     if($slide['slide_position'] != '') {
