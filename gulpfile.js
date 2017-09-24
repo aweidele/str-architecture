@@ -38,3 +38,5 @@ gulp.task('watch', function(){
   gulp.watch('src/sass/**/*.scss', ['sass']);
   gulp.watch('src/js/**/*.js', ['compress']);
 });
+
+gulp.task('default', ['sass', 'compress', 'watch']);
