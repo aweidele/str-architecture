@@ -18,7 +18,7 @@ foreach($block_text_slides as $slide) {
     }
   }
 
-  if($slide['project_info_slide'] && !$jumpset) {
+  if($slide['project_info_slide'] != 1 && !$jumpset) {
     $jumpslide = $slide['slide_position'];
     $jumpset = true;
   }
