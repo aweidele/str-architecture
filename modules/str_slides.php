@@ -8,22 +8,23 @@ foreach ($block_slides as $i => $slide) {
   $slides[] = $slide;
 }
 foreach($block_text_slides as $slide) {
-  echo "<pre>",print_r($slide),"</pre>";
   $slide['type'] = 'text';
   if($slide['text'] != '') {
+
+    if($slide['project_info_slide'] == 1 && !$jumpset) {
+      $slide['jumpslide'] = 1;
+      $jumpset = true;
+    }
+
     if($slide['slide_position'] != '') {
       array_splice($slides, $slide['slide_position'], 0, [$slide]);
     } else {
       $slides[] = $slide;
     }
   }
-
-  if($slide['project_info_slide'] == 1 && !$jumpset) {
-    $jumpslide = $slide['slide_position'];
-    $jumpset = true;
-  }
 }
 ?>
+<pre><?php print_r($slides); ?></pre>
 <section class="str_project">
   <div class="str_project_slider_container">
     <div class="str_project_slider">
