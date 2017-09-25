@@ -1,5 +1,13 @@
 var $ = jQuery;
 $(document).ready(function() {
+
+  $('body').append('<div class="feedback"></div>');
+
+    $('.feedback').html($(window).width());
+  $(window).resize(function(){
+    $('.feedback').html($(window).width());
+  });
+
   var swiped = false;
 
   $('.str_project').each(function() {

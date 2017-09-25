@@ -13,7 +13,7 @@ $white: #FFFFFF;
   font-family: 'PT Sans Narrow', sans-serif;
 }
 
-%libre {
+@mixin sans {
   font-family: 'Libre Franklin', sans-serif;
 }
 
@@ -38,4 +38,16 @@ $bold: 600;
     height: 0px;
     clear: both;
   }
+}
+
+.feedback {
+  @include sans;
+  position: fixed;
+  bottom: 5px;
+  left: 5px;
+  background: black;
+  color: white;
+  font-size: 11px;
+  padding: 5px;
+  display: none;
 }

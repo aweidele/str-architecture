@@ -26,7 +26,7 @@
 }
 
 .image_caption {
-  @extend %libre;
+  @include sans;
   font-size: 14px;
   font-style: italic;
   margin-bottom: 0.4em;
