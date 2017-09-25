@@ -23,5 +23,8 @@
     "gulp-sourcemaps": "^2.6.1",
     "gulp-uglify": "^3.0.0",
     "pump": "^1.0.2"
+  },
+  "dependencies": {
+    "jquery-touchswipe": "^1.6.15"
   }
 }
