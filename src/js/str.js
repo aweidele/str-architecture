@@ -1,7 +1,7 @@
 var $ = jQuery;
 $(document).ready(function() {
 
-  $('body').append('<div class="feedback"></div>');
+  //$('body').append('<div class="feedback"></div>');
 
   //$('.feedback').html($(window).width());
   //$(window).resize(function(){
@@ -132,10 +132,8 @@ function slideAdvance(thisSlide,direction) {
   // DETERMINE THE DIRECTION, GO FORWARD FOR LEFT, BACKWARD FOR RIGHT
   if(direction == 'right') {
     str_current--;
-    swiped = true;
   } else if(direction == 'left')  {
     str_current++;
-    swiped = true;
   } else {
     return false;
   }
