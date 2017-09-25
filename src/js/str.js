@@ -1,7 +1,7 @@
 var $ = jQuery;
 $(document).ready(function() {
 
-  //$('body').append('<div class="feedback"></div>');
+  $('body').append('<div class="feedback"></div>');
 
   //$('.feedback').html($(window).width());
   //$(window).resize(function(){
@@ -170,36 +170,38 @@ $(document).ready(function() {
 });
 
 function swipeGo() {
-      var str_current = $(this).parents('.str_project').data('current');
-      var str_this_slider = $(this).parent();
-      var str_indicator = $(this).parent().siblings('.str_project_indicators');
-      var str_indicator_mobile = $(this).parent().siblings('.str_project_indicator_mobile');
-      var str_slider_length = $('.str_slide',this).length;
-
-      // DETERMINE THE DIRECTION, GO FORWARD FOR LEFT, BACKWARD FOR RIGHT
-      if(direction == 'right') {
-        str_current--;
-        swiped = true;
-      } else if(direction == 'left')  {
-        str_current++;
-        swiped = true;
-      } else {
-        return false;
-      }
-
-      if(str_current < 0) {
-        str_current = str_slider_length - 1;
-      } else if (str_current >= str_slider_length) {
-        str_current = 0;
-      }
-
-      $('.str_slide',str_this_slider).removeClass('active');
-      $('.str_slide:eq('+str_current+')',str_this_slider).addClass('active');
-
-      $('.str_indicator',str_indicator).removeClass('active');
-      $('.str_indicator:eq('+str_current+')',str_indicator).addClass('active');
-
-      $('.str_project_indicator_current',str_indicator_mobile).text(str_current + 1);
-
-      $(this).parents('.str_project').data('current',str_current);
+  r = Math.round( Math.random() * 100);
+  $('.feedback').html('swipe! ' + r);
+      // var str_current = $(this).parents('.str_project').data('current');
+      // var str_this_slider = $(this).parent();
+      // var str_indicator = $(this).parent().siblings('.str_project_indicators');
+      // var str_indicator_mobile = $(this).parent().siblings('.str_project_indicator_mobile');
+      // var str_slider_length = $('.str_slide',this).length;
+      //
+      // // DETERMINE THE DIRECTION, GO FORWARD FOR LEFT, BACKWARD FOR RIGHT
+      // if(direction == 'right') {
+      //   str_current--;
+      //   swiped = true;
+      // } else if(direction == 'left')  {
+      //   str_current++;
+      //   swiped = true;
+      // } else {
+      //   return false;
+      // }
+      //
+      // if(str_current < 0) {
+      //   str_current = str_slider_length - 1;
+      // } else if (str_current >= str_slider_length) {
+      //   str_current = 0;
+      // }
+      //
+      // $('.str_slide',str_this_slider).removeClass('active');
+      // $('.str_slide:eq('+str_current+')',str_this_slider).addClass('active');
+      //
+      // $('.str_indicator',str_indicator).removeClass('active');
+      // $('.str_indicator:eq('+str_current+')',str_indicator).addClass('active');
+      //
+      // $('.str_project_indicator_current',str_indicator_mobile).text(str_current + 1);
+      //
+      // $(this).parents('.str_project').data('current',str_current);
 }
