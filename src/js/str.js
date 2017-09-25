@@ -79,7 +79,8 @@ $(document).ready(function() {
 
   /*** SWIPE ACTION ***/
   $('.str_project_slider').swipe({
-    swipeStatus:swipeGo,
+    swipeLeft:swipeGo,
+    swipeRight:swipeGo,
     tap:tapGo,
     allowPageScroll:"vertical"
   });
