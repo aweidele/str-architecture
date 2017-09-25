@@ -116,11 +116,14 @@
 }
 
 .str_slide_text {
-  //padding: 50px;
   position: relative;
   top: 50%;
-  transform: translateY(-50%);
+
+  max-height: 100%;
+  overflow: auto;
   padding: 0 13px;
+  transform: translateY(-50%);
+  -webkit-overflow-scrolling: touch;
 
   @media screen and (min-width: 640px) {
     padding: 0 50px;
