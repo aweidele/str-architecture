@@ -78,69 +78,12 @@ $(document).ready(function() {
   });
 
   /*** SWIPE ACTION ***/
-  $('.str_project_slider').swipe( { swipeStatus:swipeGo, allowPageScroll:"vertical"} );
-  //   swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
-  //     var str_current = $(this).parents('.str_project').data('current');
-  //     var str_this_slider = $(this).parent();
-  //     var str_indicator = $(this).parent().siblings('.str_project_indicators');
-  //     var str_indicator_mobile = $(this).parent().siblings('.str_project_indicator_mobile');
-  //     var str_slider_length = $('.str_slide',this).length;
-  //
-  //     // DETERMINE THE DIRECTION, GO FORWARD FOR LEFT, BACKWARD FOR RIGHT
-  //     if(direction == 'right') {
-  //       str_current--;
-  //       swiped = true;
-  //     } else if(direction == 'left')  {
-  //       str_current++;
-  //       swiped = true;
-  //     } else {
-  //       return false;
-  //     }
-  //
-  //     if(str_current < 0) {
-  //       str_current = str_slider_length - 1;
-  //     } else if (str_current >= str_slider_length) {
-  //       str_current = 0;
-  //     }
-  //
-  //     $('.str_slide',str_this_slider).removeClass('active');
-  //     $('.str_slide:eq('+str_current+')',str_this_slider).addClass('active');
-  //
-  //     $('.str_indicator',str_indicator).removeClass('active');
-  //     $('.str_indicator:eq('+str_current+')',str_indicator).addClass('active');
-  //
-  //     $('.str_project_indicator_current',str_indicator_mobile).text(str_current + 1);
-  //
-  //     $(this).parents('.str_project').data('current',str_current);
-  //   }
-  // }
-  //
-  // /*** CLICK ACTION ***/
-  // ).on('click',function(){
-  //   if(!swiped) {
-  //     var str_current = $(this).parents('.str_project').data('current');
-  //     var str_this_slider = $(this).parent();
-  //     var str_indicator = $(this).parent().siblings('.str_project_indicators');
-  //     var str_indicator_mobile = $(this).parent().siblings('.str_project_indicator_mobile');
-  //     var str_slider_length = $('.str_slide',this).length;
-  //
-  //     str_current++;
-  //     if (str_current >= str_slider_length) {
-  //       str_current = 0;
-  //     }
-  //
-  //     $('.str_slide',str_this_slider).removeClass('active');
-  //     $('.str_slide:eq('+str_current+')',str_this_slider).addClass('active');
-  //
-  //     $('.str_indicator',str_indicator).removeClass('active');
-  //     $('.str_indicator:eq('+str_current+')',str_indicator).addClass('active');
-  //
-  //     $('.str_project_indicator_current',str_indicator_mobile).text(str_current + 1);
-  //
-  //     $(this).parents('.str_project').data('current',str_current);
-  //   }
-  //   swiped = false;
-  // });
+  $('.str_project_slider').swipe({
+    swipeLeft:swipeGo,
+    swipeRight:swipeGo,
+    tap:tapGo,
+    allowPageScroll:"vertical"
+  });
 
   /*** BACK TO TOP ***/
   $(window).on('scroll',function() {
@@ -169,39 +112,47 @@ $(document).ready(function() {
 
 });
 
-function swipeGo() {
-  r = Math.round( Math.random() * 100);
-  $('.feedback').html('swipe! ' + r);
-      // var str_current = $(this).parents('.str_project').data('current');
-      // var str_this_slider = $(this).parent();
-      // var str_indicator = $(this).parent().siblings('.str_project_indicators');
-      // var str_indicator_mobile = $(this).parent().siblings('.str_project_indicator_mobile');
-      // var str_slider_length = $('.str_slide',this).length;
-      //
-      // // DETERMINE THE DIRECTION, GO FORWARD FOR LEFT, BACKWARD FOR RIGHT
-      // if(direction == 'right') {
-      //   str_current--;
-      //   swiped = true;
-      // } else if(direction == 'left')  {
-      //   str_current++;
-      //   swiped = true;
-      // } else {
-      //   return false;
-      // }
-      //
-      // if(str_current < 0) {
-      //   str_current = str_slider_length - 1;
-      // } else if (str_current >= str_slider_length) {
-      //   str_current = 0;
-      // }
-      //
-      // $('.str_slide',str_this_slider).removeClass('active');
-      // $('.str_slide:eq('+str_current+')',str_this_slider).addClass('active');
-      //
-      // $('.str_indicator',str_indicator).removeClass('active');
-      // $('.str_indicator:eq('+str_current+')',str_indicator).addClass('active');
-      //
-      // $('.str_project_indicator_current',str_indicator_mobile).text(str_current + 1);
-      //
-      // $(this).parents('.str_project').data('current',str_current);
+function tapGo(event) {
+  thisSlide = $(this);
+  slideAdvance(thisSlide,'left');
+}
+
+function swipeGo(event, direction) {
+  thisSlide = $(this);
+  slideAdvance(thisSlide,direction);
+}
+
+function slideAdvance(thisSlide,direction) {
+  var str_current = thisSlide.parents('.str_project').data('current');
+  var str_this_slider = thisSlide.parent();
+  var str_indicator = thisSlide.parent().siblings('.str_project_indicators');
+  var str_indicator_mobile = thisSlide.parent().siblings('.str_project_indicator_mobile');
+  var str_slider_length = $('.str_slide',thisSlide).length;
+
+  // DETERMINE THE DIRECTION, GO FORWARD FOR LEFT, BACKWARD FOR RIGHT
+  if(direction == 'right') {
+    str_current--;
+    swiped = true;
+  } else if(direction == 'left')  {
+    str_current++;
+    swiped = true;
+  } else {
+    return false;
+  }
+
+  if(str_current < 0) {
+    str_current = str_slider_length - 1;
+  } else if (str_current >= str_slider_length) {
+    str_current = 0;
+  }
+
+  $('.str_slide',str_this_slider).removeClass('active');
+  $('.str_slide:eq('+str_current+')',str_this_slider).addClass('active');
+
+  $('.str_indicator',str_indicator).removeClass('active');
+  $('.str_indicator:eq('+str_current+')',str_indicator).addClass('active');
+
+  $('.str_project_indicator_current',str_indicator_mobile).text(str_current + 1);
+
+  thisSlide.parents('.str_project').data('current',str_current);
 }
