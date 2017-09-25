@@ -1,12 +1,12 @@
 var $ = jQuery;
 $(document).ready(function() {
 
-  $('body').append('<div class="feedback"></div>');
+  //$('body').append('<div class="feedback"></div>');
 
-    $('.feedback').html($(window).width());
-  $(window).resize(function(){
-    $('.feedback').html($(window).width());
-  });
+  //$('.feedback').html($(window).width());
+  //$(window).resize(function(){
+  //  $('.feedback').html($(window).width());
+  //});
 
   var swiped = false;
 
@@ -93,6 +93,8 @@ $(document).ready(function() {
       } else if(direction == 'left')  {
         str_current++;
         swiped = true;
+      } else {
+        return false;
       }
 
       if(str_current < 0) {
