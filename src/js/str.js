@@ -8,6 +8,13 @@ $(document).ready(function() {
   //  $('.feedback').html($(window).width());
   //});
 
+  if($('.body_frontpage_load').length) {
+
+    setTimeout(function() {
+      $('.body_frontpage_load').removeClass('body_frontpage_load');
+    },3000);
+  }
+
   var swiped = false;
 
   $('.str_project').each(function() {

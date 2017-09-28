@@ -15,10 +15,4 @@
   svg {
     @include imgblock;
   }
-
-  .body_frontpage & {
-    svg {
-      fill: $white;
-    }
-  }
 }
