@@ -68,3 +68,23 @@ $speed: 2s;
     display: none;
   }
 }
+
+// HOMEPAGE SKETCH
+////////////////////////////////////////////////////////////////////////////////
+
+.homepage_sketch {
+  width: 100%;
+  position: relative;
+  //background: rgba($white,0.1);
+  padding-bottom: 45.277778%;
+}
+
+.homepage_sketch_tile {
+  position: absolute;
+}
+
+.homepage_sketch_image {
+  height: auto;
+  width: 100%;
+  display: block;
+}

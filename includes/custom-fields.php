@@ -542,7 +542,7 @@ acf_add_local_field_group(array (
 						'id' => '',
 					),
 					'return_format' => 'array',
-					'preview_size' => 'thumbnail',
+					'preview_size' => 'full',
 					'library' => 'all',
 					'min_width' => '',
 					'min_height' => '',
