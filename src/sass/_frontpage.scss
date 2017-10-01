@@ -7,7 +7,7 @@ $speed: 2s;
   .header_logo {
     transition: width $speed;
     svg {
-      //fill: $white;
+      fill: $white;
       //transition: width $speed;
     }
   }
@@ -66,5 +66,5 @@ $speed: 2s;
 }
 
 svg {
-  fill: $white;
+  //fill: $white;
 }
