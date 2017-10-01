@@ -76,6 +76,10 @@ $speed: 2s;
   width: 100%;
   position: relative;
   padding-bottom: 45.277778%;
+
+  @media screen and (max-width: 650px) {
+    display: none;
+  }
 }
 
 .homepage_sketch_tile {
