@@ -75,16 +75,38 @@ $speed: 2s;
 .homepage_sketch {
   width: 100%;
   position: relative;
-  //background: rgba($white,0.1);
   padding-bottom: 45.277778%;
 }
 
 .homepage_sketch_tile {
   position: absolute;
+  overflow: hidden;
+
+  &:hover {
+    .homepage_sketch_photo {
+      opacity: 1;
+    }
+  }
 }
 
 .homepage_sketch_image {
   height: auto;
   width: 100%;
+  position: relative;
+  z-index: 0;
   display: block;
+}
+
+.homepage_sketch_photo {
+  height: auto;
+  width: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: block;
+  opacity: 0;
+  transition: opacity 0.5s;
+  z-index: 1;
 }
