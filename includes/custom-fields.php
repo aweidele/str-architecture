@@ -527,7 +527,7 @@ acf_add_local_field_group(array (
 			),
 			'taxonomy' => array (
 			),
-			'allow_null' => 0,
+			'allow_null' => 1,
 			'allow_archives' => 1,
 			'multiple' => 0,
 		),
@@ -668,7 +668,7 @@ acf_add_local_field_group(array (
 					'label' => 'Project Link Page',
 					'name' => 'project_link_page',
 					'type' => 'page_link',
-					'instructions' => 'Overrides project page.',
+					'instructions' => 'Overrides project page link.',
 					'required' => 0,
 					'conditional_logic' => 0,
 					'wrapper' => array (
@@ -681,7 +681,7 @@ acf_add_local_field_group(array (
 					),
 					'taxonomy' => array (
 					),
-					'allow_null' => 0,
+					'allow_null' => 1,
 					'allow_archives' => 1,
 					'multiple' => 0,
 				),

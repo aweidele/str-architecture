@@ -1,8 +1,13 @@
 <div class="homepage_sketch">
-<?php foreach($sketch as $i => $tile) { ?>
+<?php foreach($sketch as $i => $tile) {
+  $tile_link = $tile['project_link_page'] ? $tile['project_link_page'] : $project_page;
+  consolelog($tile);
+?>
   <div class="homepage_sketch_tile homepage_sketch_tile_<?php echo str_pad($i, 3, '000', STR_PAD_LEFT); ?>">
-    <img class="homepage_sketch_image" src="<?php echo $tile['sketch_image']['url']; ?>">
-    <img class="homepage_sketch_photo" src="<?php echo $tile['photo_image']['url']; ?>">
+    <a href="<?php echo $tile_link; ?>#<?php echo $tile['project_link']->post_name; ?>">
+      <img class="homepage_sketch_image" src="<?php echo $tile['sketch_image']['url']; ?>">
+      <img class="homepage_sketch_photo" src="<?php echo $tile['photo_image']['url']; ?>">
+    </a>
   </div>
 <?php } ?>
 </div>
@@ -23,4 +28,3 @@
   }
 <?php } ?>
 </style>
-<?php consolelog($sketch); ?>
