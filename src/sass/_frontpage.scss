@@ -78,22 +78,21 @@ $tiles: (
 	(61, 0, 424),
   (485, 0, 415),
   (900, 0, 450),
-  (61, 0, 424),
-  (61, 0, 424),
-  (61, 0, 424),
-  (61, 0, 424),
-  (61, 0, 424),
-  (61, 0, 424),
-  (61, 0, 424),
-  (61, 0, 424),
-  (61, 0, 424),
-  (61, 0, 424),
-  (61, 0, 424),
-  (61, 0, 424),
+  (1350, 0, 424),
+  (672, 164, 228),
+  (61, 253, 424),
+  (485, 322, 415),
+  (900, 386, 450),
+  (1350, 439, 424),
+  (485, 552, 415),
+  (1350, 606, 424),
+  (61, 644, 312),
+  (373, 644, 377),
+  (750, 644, 371),
+  (1121, 644, 229),
 );
 
 .homepage_sketch {
-  background: rgba($white,0.1);
   width: 100%;
   position: relative;
   padding-bottom: percentage($base_height / $base_width);
@@ -106,6 +105,8 @@ $tiles: (
 .homepage_sketch_tile {
   position: absolute;
   overflow: hidden;
+
+  min-height: 10px;
 
   &:hover {
     .homepage_sketch_photo {
@@ -137,6 +138,19 @@ $tiles: (
 }
 
 
-@each $t, $l, $w in $tiles {
+@for $i from 1 through length($tiles) {
+  $b: random(128)-1;
 
+  $tile: nth($tiles, $i);
+
+  $l: nth($tile, 1) * 1px;
+  $t: nth($tile, 2) * 1px;
+  $w: nth($tile, 3) * 1px;
+
+  .homepage_sketch_tile_#{$i} {
+    width: percentage($w / $base_width);
+    top: percentage($t / $base_height);
+    left: percentage($l / $base_width);
+    background: rgb($b,$b,$b);
+  }
 }

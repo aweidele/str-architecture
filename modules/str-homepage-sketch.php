@@ -2,7 +2,7 @@
 <?php foreach($sketch as $i => $tile) {
   //$tile_link = $tile['project_link_page'] ? $tile['project_link_page'] : $project_page;
 ?>
-  <div class="homepage_sketch_tile homepage_sketch_tile_<?php echo $i; ?>">
+  <div class="homepage_sketch_tile homepage_sketch_tile_<?php echo $i + 1; ?>">
 <?php  /* if($tile['project_link']) { ?>
     <a href="<?php echo $tile_link.'#'.$tile['project_link']->post_name; ?>">
 <?php } */ ?>
