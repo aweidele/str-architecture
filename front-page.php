@@ -16,9 +16,6 @@ include('modules/str-homepage-sketch.php');
 <div class="frontpage_mobile_sketch">
   <img src="<?php echo $mobile_sketch['url']; ?>">
 </div>
-<pre>
-<?php print_r($sketch); ?>
-</pre>
 <?php
 endwhile;
 endif;
