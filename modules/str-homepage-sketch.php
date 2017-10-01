@@ -3,12 +3,16 @@
   $tile_link = $tile['project_link_page'] ? $tile['project_link_page'] : $project_page;
 ?>
   <div class="homepage_sketch_tile homepage_sketch_tile_<?php echo str_pad($i, 3, '000', STR_PAD_LEFT); ?>">
-    <a href="<?php echo $tile_link; ?>#<?php echo $tile['project_link']->post_name; ?>">
+<?php if($tile['project_link']) { ?>
+    <a href="<?php echo $tile_link.'#'.$tile['project_link']->post_name; ?>">
+<?php } ?>
       <img class="homepage_sketch_image" src="<?php echo $tile['sketch_image']['url']; ?>">
 <?php if($tile['photo_image']) { ?>
       <img class="homepage_sketch_photo" src="<?php echo $tile['photo_image']['url']; ?>">
 <?php } ?>
+<?php if($tile['project_link']) { ?>
     </a>
+<?php } ?>
   </div>
 <?php } ?>
 </div>
