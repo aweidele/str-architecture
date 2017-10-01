@@ -9,8 +9,8 @@ footer {
   bottom: 0;
   right: 0;
 
-  background: rgba(0,0,0,0.5);
-  color: $white;
+  background: rgba($white,0.5);
+  color: $black;
   font-size: 10px;
   text-align: center;
   text-decoration: none;
@@ -37,7 +37,7 @@ footer {
   svg {
     width: 21px;
     height: 21px;
-    fill: #FFFFFF;
+    fill: $black;
     display: block;
     margin: auto;
   }

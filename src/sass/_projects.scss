@@ -62,11 +62,11 @@
   img {
     height: auto;
     width: 100%;
-    //position: relative;
-    //top: 50%;
+    position: relative;
+    top: 50%;
 
     display: block;
-    //transform: translateY(-50%);
+    transform: translateY(-50%);
   }
 
   &.str_slide_portrait {
@@ -271,6 +271,7 @@
     &.str_slider_info_link {
       font-style: normal;
       text-decoration: underline;
+      text-transform: uppercase;
       cursor: pointer;
     }
   }

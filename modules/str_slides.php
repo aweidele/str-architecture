@@ -39,7 +39,7 @@ foreach($slides as $j => $slide) {
             <img src="<?php echo $slide['sizes'][$size]; ?>">
             <a href="<?php echo $slide['url']; ?>" class="str_slide_download" target="_blank">
               <svg viewbox="0 0 32 32" class="icon-download"><use href="#download"></use></svg>
-              <?php _e('Download Image'); ?></a>
+              <?php //_e('Download'); ?></a>
           </div>
         <?php } else { ?>
           <div class="str_slide_text">
@@ -72,7 +72,7 @@ $i++;
 
     <?php echo wpautop($block_description); ?>
 <?php if($jumpset) { ?>
-    <p class="str_slider_info_link">Project Info</p>
+    <p class="str_slider_info_link">Info</p>
 <?php } ?>
   </div>
   <div class="str_project_controls">
