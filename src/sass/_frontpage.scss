@@ -54,7 +54,7 @@ $speed: 2s;
   }
 }
 
-.frontpage_sketch {
+.frontpage_mobile_sketch {
   height: calc(100vh - 196px);
 
   overflow: hidden;
@@ -63,8 +63,8 @@ $speed: 2s;
   img {
     @include imgblock;
   }
-}
 
-svg {
-  //fill: $white;
+  @media screen and (min-width: 650px) {
+    display: none;
+  }
 }
