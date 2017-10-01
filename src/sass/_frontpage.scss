@@ -71,11 +71,32 @@ $speed: 2s;
 
 // HOMEPAGE SKETCH
 ////////////////////////////////////////////////////////////////////////////////
+$base_width: 1800px;
+$base_height: 815px;
+
+$tiles: (
+	(61, 0, 424),
+  (485, 0, 415),
+  (900, 0, 450),
+  (61, 0, 424),
+  (61, 0, 424),
+  (61, 0, 424),
+  (61, 0, 424),
+  (61, 0, 424),
+  (61, 0, 424),
+  (61, 0, 424),
+  (61, 0, 424),
+  (61, 0, 424),
+  (61, 0, 424),
+  (61, 0, 424),
+  (61, 0, 424),
+);
 
 .homepage_sketch {
+  background: rgba($white,0.1);
   width: 100%;
   position: relative;
-  padding-bottom: 45.277778%;
+  padding-bottom: percentage($base_height / $base_width);
 
   @media screen and (max-width: 650px) {
     display: none;
@@ -98,7 +119,7 @@ $speed: 2s;
   width: 100%;
   position: relative;
   z-index: 0;
-  display: block;
+  display: none;
 }
 
 .homepage_sketch_photo {
@@ -113,4 +134,9 @@ $speed: 2s;
   opacity: 0;
   transition: opacity 0.5s;
   z-index: 1;
+}
+
+
+@each $t, $l, $w in $tiles {
+
 }
