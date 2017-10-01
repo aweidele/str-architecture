@@ -2,7 +2,7 @@
 /*
 ADVANCED CUSTOM FIELDS
 */
-//include_once('includes/custom-fields.php');
+include_once('includes/custom-fields.php');
 
 /*
 ENQUEUE SCRIPTS AND STYLES
