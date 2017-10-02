@@ -20,7 +20,7 @@ $speed: 2s;
       left: 0;
 
       transform: translateY(0);
-      transition: transform $speed;
+      transition: transform $speed / 2, top $speed / 2;
     }
 
     .navigation_row {
@@ -44,6 +44,11 @@ $speed: 2s;
         svg {
           width: 100%;
         }
+      }
+
+      .logo_wrapper {
+        top: 50%;
+        transform: translateY(-50%);
       }
 
     }
@@ -71,11 +76,31 @@ $speed: 2s;
 
 // HOMEPAGE SKETCH
 ////////////////////////////////////////////////////////////////////////////////
+$base_width: 1800px;
+$base_height: 815px;
+
+$tiles: (
+	(61, 0, 424),
+  (485, 0, 415),
+  (900, 0, 450),
+  (1350, 0, 424),
+  (672, 164, 228),
+  (61, 253, 424),
+  (485, 322, 415),
+  (900, 386, 450),
+  (1350, 439, 424),
+  (485, 552, 415),
+  (1350, 606, 424),
+  (61, 644, 312),
+  (373, 644, 377),
+  (750, 644, 371),
+  (1121, 644, 229),
+);
 
 .homepage_sketch {
   width: 100%;
   position: relative;
-  padding-bottom: 45.277778%;
+  padding-bottom: percentage($base_height / $base_width);
 
   @media screen and (max-width: 650px) {
     display: none;
@@ -85,6 +110,8 @@ $speed: 2s;
 .homepage_sketch_tile {
   position: absolute;
   overflow: hidden;
+
+  min-height: 10px;
 
   &:hover {
     .homepage_sketch_photo {
@@ -113,4 +140,22 @@ $speed: 2s;
   opacity: 0;
   transition: opacity 0.5s;
   z-index: 1;
+}
+
+
+@for $i from 1 through length($tiles) {
+  $b: random(128)-1;
+
+  $tile: nth($tiles, $i);
+
+  $l: nth($tile, 1) * 1px;
+  $t: nth($tile, 2) * 1px;
+  $w: nth($tile, 3) * 1px;
+
+  .homepage_sketch_tile_#{$i} {
+    width: percentage($w / $base_width);
+    top: percentage($t / $base_height);
+    left: percentage($l / $base_width);
+    //background: rgb($b,$b,$b);
+  }
 }
