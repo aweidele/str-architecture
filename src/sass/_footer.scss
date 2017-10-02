@@ -61,7 +61,7 @@ footer {
   max-width: 359px;
   margin: auto;
   overflow: hidden;
-  padding-bottom: 70px;
+  padding: 70px 0;
 
   a {
     display: block;
@@ -74,5 +74,9 @@ footer {
 
   svg {
     @include imgblock;
+  }
+
+  .body_frontpage & {
+    display: none;
   }
 }
