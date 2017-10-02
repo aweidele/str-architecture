@@ -46,6 +46,11 @@ $speed: 2s;
         }
       }
 
+      .logo_wrapper {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
     }
   }
 
