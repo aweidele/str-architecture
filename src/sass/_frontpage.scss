@@ -20,7 +20,7 @@ $speed: 2s;
       left: 0;
 
       transform: translateY(0);
-      transition: transform $speed;
+      transition: transform $speed / 2, top $speed / 2;
     }
 
     .navigation_row {
