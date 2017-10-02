@@ -1,6 +1,4 @@
 <?php
-// test!
-
 /*
 ADVANCED CUSTOM FIELDS
 */

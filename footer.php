@@ -2,7 +2,7 @@
 <footer>
   <div class="footer_logo"><a href="<?php echo get_home_url(); ?>">
     <span><?php echo get_bloginfo('name'); ?></span>
-    <?php echo $logo; ?>
+    <svg viewbox="0 0 207.6 46.6"><use href="#logo"></use></svg>
   </a></h1>
   <a class="back_to_top" href="#">
     <span><svg viewbox="0 0 32 32"><use href="#arrow_up"></use></svg>
