@@ -48,7 +48,6 @@ if (is_front_page()) {
   }
 
 ?>>
-<pre><?php print_r($_SESSION); ?></pre>
 <header class="header">
   <div class="logo_wrapper">
     <div class="row">
