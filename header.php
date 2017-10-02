@@ -1,3 +1,10 @@
+<?php
+session_start();
+if ( is_front_page() && ( !isset($_SESSION['hp_visit']) || !$_SESSION['hp_visit'] ) ) {
+  $first_visit = true;
+  $_SESSION['hp_visit'] = true;
+}
+?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -36,11 +43,12 @@ if (is_front_page()) {
 <body<?php
   if(is_front_page()) {
     $c = 'body_frontpage';
-    $c .= ' body_frontpage_load';
+    $c .= $first_visit ? ' body_frontpage_load' : '';
     echo ' class="'.$c.'"';
   }
 
 ?>>
+<pre><?php print_r($_SESSION); ?></pre>
 <header class="header">
   <div class="logo_wrapper">
     <div class="row">
