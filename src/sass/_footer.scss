@@ -56,3 +56,23 @@ footer {
     }
   }
 }
+
+.footer_logo {
+  max-width: 359px;
+  margin: auto;
+  overflow: hidden;
+  padding-bottom: 70px;
+
+  a {
+    display: block;
+    padding: 25px 0 20px 0;
+  }
+
+  span {
+    @include position_off;
+  }
+
+  svg {
+    @include imgblock;
+  }
+}
