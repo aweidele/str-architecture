@@ -36,7 +36,7 @@ if (is_front_page()) {
 <body<?php
   if(is_front_page()) {
     $c = 'body_frontpage';
-    //$c .= ' body_frontpage_load';
+    $c .= ' body_frontpage_load';
     echo ' class="'.$c.'"';
   }
 
