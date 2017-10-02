@@ -151,6 +151,6 @@ $tiles: (
     width: percentage($w / $base_width);
     top: percentage($t / $base_height);
     left: percentage($l / $base_width);
-    background: rgb($b,$b,$b);
+    //background: rgb($b,$b,$b);
   }
 }
