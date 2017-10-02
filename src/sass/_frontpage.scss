@@ -146,6 +146,12 @@ $tiles: (
   z-index: 1;
 }
 
+.homepage_sketch_photo_image {
+  height: auto;
+  width: 100%;
+
+  display: block;
+}
 
 @for $i from 1 through length($tiles) {
   $b: random(128)-1;
