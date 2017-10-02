@@ -133,7 +133,7 @@ $tiles: (
 }
 
 .homepage_sketch_photo {
-  height: auto;
+  height: 100%;
   width: 100%;
 
   position: absolute;
@@ -142,6 +142,7 @@ $tiles: (
 
   display: block;
   opacity: 0;
+  padding: 5px;
   transition: opacity 0.5s;
   z-index: 1;
 }
@@ -150,7 +151,11 @@ $tiles: (
   height: auto;
   width: 100%;
 
+  position: relative;
+  top: 50%;
+
   display: block;
+  transform: translateY(-50%);
 }
 
 @for $i from 1 through length($tiles) {
