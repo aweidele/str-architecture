@@ -117,6 +117,9 @@ $tiles: (
     .homepage_sketch_photo {
       opacity: 1;
     }
+    .homepage_sketch_image {
+      opacity: 0;
+    }
   }
 }
 
@@ -126,6 +129,7 @@ $tiles: (
   position: relative;
   z-index: 0;
   display: block;
+  transition: opacity 0.5s;
 }
 
 .homepage_sketch_photo {
