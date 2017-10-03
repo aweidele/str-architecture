@@ -7,7 +7,7 @@ $mobile_sketch = get_field('mobile_sketch');
 $project_page = get_field('project_page');
 
 $sketch = [];
-for($i=1;$i<16;$i++) {
+for($i=1;$i<17;$i++) {
   $field = 'sketch_tile_'.$i;
   $sketch[] = get_field($field);
 }
