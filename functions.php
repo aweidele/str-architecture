@@ -40,6 +40,7 @@ add_image_size('STR Slider Portrait',999999,840);
 add_image_size('image_module_content',685,9999999);
 add_image_size('image_module_medium',860,9999999);
 add_image_size('image_module_full',1200,9999999);
+add_image_size('homepage_sketch',450,9999999);
 
 /*
 ADD MENUS
