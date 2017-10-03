@@ -551,7 +551,7 @@ acf_add_local_field_group(array (
 					'label' => 'Sketch Image',
 					'name' => 'sketch_image',
 					'type' => 'image',
-					'instructions' => '',
+					'instructions' => '424x253',
 					'required' => 0,
 					'conditional_logic' => 0,
 					'wrapper' => array (
@@ -624,7 +624,7 @@ acf_add_local_field_group(array (
 			'label' => 'Sketch Tile 2',
 			'name' => 'sketch_tile_2',
 			'type' => 'group',
-			'instructions' => '',
+			'instructions' => '415x164',
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array (
@@ -712,7 +712,7 @@ acf_add_local_field_group(array (
 			'label' => 'Sketch Tile 3',
 			'name' => 'sketch_tile_3',
 			'type' => 'group',
-			'instructions' => '',
+			'instructions' => '450x386',
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array (
@@ -800,7 +800,7 @@ acf_add_local_field_group(array (
 			'label' => 'Sketch Tile 4',
 			'name' => 'sketch_tile_4',
 			'type' => 'group',
-			'instructions' => '',
+			'instructions' => '424x439',
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array (
@@ -888,7 +888,7 @@ acf_add_local_field_group(array (
 			'label' => 'Sketch Tile 5',
 			'name' => 'sketch_tile_5',
 			'type' => 'group',
-			'instructions' => '',
+			'instructions' => '228x158',
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array (
@@ -976,7 +976,7 @@ acf_add_local_field_group(array (
 			'label' => 'Sketch Tile 6',
 			'name' => 'sketch_tile_6',
 			'type' => 'group',
-			'instructions' => '',
+			'instructions' => '424x195',
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array (
@@ -1064,7 +1064,7 @@ acf_add_local_field_group(array (
 			'label' => 'Sketch Tile 7',
 			'name' => 'sketch_tile_7',
 			'type' => 'group',
-			'instructions' => '',
+			'instructions' => '415x230',
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array (
@@ -1152,7 +1152,7 @@ acf_add_local_field_group(array (
 			'label' => 'Sketch Tile 8',
 			'name' => 'sketch_tile_8',
 			'type' => 'group',
-			'instructions' => '',
+			'instructions' => '450x258',
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array (
@@ -1240,7 +1240,7 @@ acf_add_local_field_group(array (
 			'label' => 'Sketch Tile 9',
 			'name' => 'sketch_tile_9',
 			'type' => 'group',
-			'instructions' => '',
+			'instructions' => '424x167',
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array (
@@ -1328,7 +1328,7 @@ acf_add_local_field_group(array (
 			'label' => 'Sketch Tile 10',
 			'name' => 'sketch_tile_16',
 			'type' => 'group',
-			'instructions' => '',
+			'instructions' => '424x196',
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array (
@@ -1416,7 +1416,7 @@ acf_add_local_field_group(array (
 			'label' => 'Sketch Tile 11',
 			'name' => 'sketch_tile_10',
 			'type' => 'group',
-			'instructions' => '',
+			'instructions' => '415x92',
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array (
@@ -1504,7 +1504,7 @@ acf_add_local_field_group(array (
 			'label' => 'Sketch Tile 12',
 			'name' => 'sketch_tile_11',
 			'type' => 'group',
-			'instructions' => '',
+			'instructions' => '424x209',
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array (
@@ -1592,7 +1592,7 @@ acf_add_local_field_group(array (
 			'label' => 'Sketch Tile 13',
 			'name' => 'sketch_tile_12',
 			'type' => 'group',
-			'instructions' => '',
+			'instructions' => '312x171',
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array (
@@ -1680,7 +1680,7 @@ acf_add_local_field_group(array (
 			'label' => 'Sketch Tile 14',
 			'name' => 'sketch_tile_13',
 			'type' => 'group',
-			'instructions' => '',
+			'instructions' => '377x171',
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array (
@@ -1768,7 +1768,7 @@ acf_add_local_field_group(array (
 			'label' => 'Sketch Tile 15',
 			'name' => 'sketch_tile_14',
 			'type' => 'group',
-			'instructions' => '',
+			'instructions' => '371x171',
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array (
@@ -1856,7 +1856,7 @@ acf_add_local_field_group(array (
 			'label' => 'Sketch Tile 16',
 			'name' => 'sketch_tile_15',
 			'type' => 'group',
-			'instructions' => '',
+			'instructions' => '229x171',
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array (

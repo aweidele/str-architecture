@@ -8,7 +8,7 @@
 <?php }  ?>
       <img class="homepage_sketch_image" src="<?php echo $tile['sketch_image']['url']; ?>">
 <?php if($tile['photo_image']) { ?>
-      <div class="homepage_sketch_photo"><img class="homepage_sketch_photo_image" src="<?php echo $tile['photo_image']['url']; ?>"></div>
+      <div class="homepage_sketch_photo"><img class="homepage_sketch_photo_image" src="<?php echo $tile['photo_image']['sizes']['homepage_sketch']; ?>"></div>
 <?php } ?>
 <?php if($tile['project_link']) { ?>
     </a>
