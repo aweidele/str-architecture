@@ -99,6 +99,7 @@ $tiles: (
 );
 
 .homepage_sketch {
+  height: calc(100vh - 183px);
   width: 100%;
   position: relative;
   padding-bottom: percentage($base_height / $base_width);
