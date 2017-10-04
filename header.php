@@ -40,9 +40,6 @@ if (is_front_page()) {
   <path id="arrow_up" class="st0" d="M4.3,21.3c-0.4,0.4-0.4,1,0,1.4c0.4,0.4,1,0.4,1.4,0L16,11.4l10.3,11.3c0.4,0.4,1,0.4,1.4,0 c0.4-0.4,0.4-1,0-1.4l-10.9-12C16.6,9.1,16.3,9,16,9c-0.3,0-0.6,0.1-0.8,0.3L4.3,21.3L4.3,21.3z"/>
   <path id="download" class="st0" d="M27.5,29h-23v-8.4c0-0.6,0.4-1,1-1s1,0.4,1,1V27h19v-6.4c0-0.6,0.4-1,1-1s1,0.4,1,1V29z M26.3,12.6c-0.4-0.4-1-0.4-1.4,0L17,20.9V4c0-0.6-0.4-1-1-1s-1,0.4-1,1v16.9l-7.9-8.3c-0.4-0.4-1-0.4-1.4,0c-0.4,0.4-0.4,1,0,1.4 l9.6,10.1c0.2,0.2,0.4,0.3,0.7,0.3s0.5-0.1,0.7-0.3L26.4,14C26.7,13.6,26.7,13,26.3,12.6z"/>
 </svg>
-<?php
-echo file_get_contents( get_stylesheet_directory_uri() . '/images/logo.svg' );
-?>
 </figure>
 <body<?php
   if(is_front_page()) {
@@ -59,7 +56,9 @@ echo file_get_contents( get_stylesheet_directory_uri() . '/images/logo.svg' );
       <div class="cell">
         <h1 class="header_logo"><a href="<?php echo get_home_url(); ?>">
           <span><?php echo get_bloginfo('name'); ?></span>
-          <svg viewBox="0 0 207.6 46.6"><use href="#logo"></use></svg>
+          <?php
+          echo file_get_contents( get_stylesheet_directory_uri() . '/images/logo.svg' );
+          ?>
         </a></h1>
       </div>
     </div>
