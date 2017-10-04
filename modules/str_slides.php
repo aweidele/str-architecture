@@ -44,9 +44,12 @@ foreach($slides as $j => $slide) {
         <?php } else { ?>
           <div class="str_slide_text">
             <div class="typography">
-
-<?php echo $slide['text']; ?>
-
+<?php
+  if($slide['slide_layout'] == 'text') {
+    echo $slide['text'];
+  } else if($slide['slide_layout'] == 'quote') { ?>
+              <blockquote class="str_quote" cite="<?php echo $slide['quote']['attribution']; ?>"><span><?php echo $slide['quote']['quote']; ?></span></blockquote>
+  <?php } ?>
             </div>
           </div>
         <?php } ?>
