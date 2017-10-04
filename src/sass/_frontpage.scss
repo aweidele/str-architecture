@@ -99,7 +99,7 @@ $tiles: (
 );
 
 .homepage_sketch {
-  height: calc(100vh - 183px);
+  max-height: calc(100vh - 183px);
   width: 100%;
   position: relative;
   padding-bottom: percentage($base_height / $base_width);
@@ -165,8 +165,6 @@ $tiles: (
 }
 
 @for $i from 1 through length($tiles) {
-  $b: random(128)-1;
-
   $tile: nth($tiles, $i);
 
   $l: nth($tile, 1) * 1px;
