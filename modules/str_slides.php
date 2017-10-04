@@ -38,7 +38,7 @@ foreach($slides as $j => $slide) {
           <div class="str_slide_image<?php echo $orientation == 'portrait' ? ' str_slide_portrait' : ''; ?>">
             <img src="<?php echo $slide['sizes'][$size]; ?>">
             <a href="<?php echo $slide['url']; ?>" class="str_slide_download" target="_blank">
-              <svg viewbox="0 0 32 32" class="icon-download"><use href="#download"></use></svg>
+              <svg viewbox="0 0 32 32" class="icon-download"><use xlink:href="#download"></use></svg>
               <?php //_e('Download'); ?></a>
           </div>
         <?php } else { ?>
@@ -76,7 +76,7 @@ $i++;
 <?php } ?>
   </div>
   <div class="str_project_controls">
-    <div class="str_previous">Prev<svg viewbox="0 0 32 32"><use href="#arrow_left"></use></svg></div>
-    <div class="str_next">Next<svg viewbox="0 0 32 32"><use href="#arrow_right"></use></svg></div>
+    <div class="str_previous">Prev<svg viewbox="0 0 32 32"><use xlink:href="#arrow_left"></use></svg></div>
+    <div class="str_next">Next<svg viewbox="0 0 32 32"><use xlink:href="#arrow_right"></use></svg></div>
   </div>
 </section>
