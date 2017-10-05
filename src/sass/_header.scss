@@ -13,6 +13,11 @@
   }
 
   svg {
-    @include imgblock;
+    //@include imgblock;
+    height: 80px;
+    width: 357px;
+
+    display: block;
+    transition: width $speed;
   }
 }

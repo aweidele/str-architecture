@@ -59,7 +59,7 @@ echo file_get_contents( get_stylesheet_directory_uri() . '/images/logo.svg' );
       <div class="cell">
         <h1 class="header_logo"><a href="<?php echo get_home_url(); ?>">
           <span><?php echo get_bloginfo('name'); ?></span>
-          <svg viewBox="0 0 207.6 46.6"><use xlink:href="#logo"></use></svg>
+          <svg viewBox="0 0 207.6 46.6" width="207" height="46"><use xlink:href="#logo"></use></svg>
         </a></h1>
       </div>
     </div>
