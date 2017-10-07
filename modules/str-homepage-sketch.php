@@ -7,7 +7,7 @@
 <?php  if($tile['project_link']) { ?>
     <a href="<?php echo $tile_link.'#'.$tile['project_link']->post_name; ?>">
 <?php }  ?>
-      <img class="homepage_sketch_image" src="<?php echo $tile['sketch_image']['url']; ?>">
+      <img class="homepage_sketch_image" src="<?php echo $tile['sketch_image']['sizes']['homepage_sketch']; ?>">
 <?php if($tile['photo_image']) { ?>
       <div class="homepage_sketch_photo"><img class="homepage_sketch_photo_image" src="<?php echo $tile['photo_image']['sizes']['homepage_sketch']; ?>"></div>
 <?php } ?>
