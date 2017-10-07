@@ -114,7 +114,7 @@ $tiles: (
 
   &:hover {
     .homepage_sketch_photo {
-      opacity: .3;
+      opacity: 1;
     }
     .homepage_sketch_image {
       opacity: 0;
@@ -129,8 +129,6 @@ $tiles: (
   z-index: 0;
   display: block;
   transition: opacity 0.5s;
-
-  border: 1px solid red;
 }
 
 .homepage_sketch_photo {
@@ -146,8 +144,6 @@ $tiles: (
   padding: 5px;
   transition: opacity 0.5s;
   z-index: 1;
-
-  border: 1px solid blue;
 }
 
 .homepage_sketch_photo_image {
