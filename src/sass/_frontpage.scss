@@ -112,11 +112,9 @@ $tiles: (
   position: absolute;
   overflow: hidden;
 
-  min-height: 10px;
-
   &:hover {
     .homepage_sketch_photo {
-      opacity: 1;
+      opacity: .3;
     }
     .homepage_sketch_image {
       opacity: 0;
