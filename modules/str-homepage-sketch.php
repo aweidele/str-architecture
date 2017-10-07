@@ -1,5 +1,6 @@
 <div class="homepage_sketch">
 <?php foreach($sketch as $i => $tile) {
+  consolelog($tile);
   //$tile_link = $tile['project_link_page'] ? $tile['project_link_page'] : $project_page;
 ?>
   <div class="homepage_sketch_tile homepage_sketch_tile_<?php echo $i + 1; ?>">
