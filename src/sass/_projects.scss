@@ -164,6 +164,7 @@
   top: 0;
   text-indent: -999999px;
   cursor: pointer;
+  z-index: 50;
 
   @media screen and (max-width: 640px) {
     display: none;
@@ -176,6 +177,7 @@
     transform: translateY(-50%);
     width: 24px;
     height: 24px;
+    z-index: 1;
 
     @media screen and (min-width: 800px) {
       width: 32px;
@@ -184,6 +186,23 @@
 
     path {
       stroke: #81898d;
+    }
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: rgba($white,0.3);
+    border-radius: 50%;
+
+    @media screen and (min-width: 1200px) {
+      display: none;
     }
   }
 }
@@ -198,6 +217,15 @@
   left: 0px;
   svg {
     right: 10px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .str_next:before {
+    left: 40%;
+  }
+  .str_previous:before {
+    left: 60%;
   }
 }
 
