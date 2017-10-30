@@ -17,9 +17,15 @@
 .menu-item {
   display: inline-block;
   a {
-    padding: 24px 11px;
+    padding: 12px 11px 24px;
     text-decoration: none;
     color: $black;
     display: block;
+  }
+
+  .body_frontpage & {
+    a {
+      color: $white;
+    }
   }
 }

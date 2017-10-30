@@ -37,9 +37,10 @@ ADD IMAGE SIZES
 */
 add_image_size('STR Slider',1075,840);
 add_image_size('STR Slider Portrait',999999,840);
-add_image_size('image_module_content',521,9999999);
+add_image_size('image_module_content',685,9999999);
 add_image_size('image_module_medium',860,9999999);
 add_image_size('image_module_full',1200,9999999);
+add_image_size('homepage_sketch',450,9999999);
 
 /*
 ADD MENUS
@@ -97,11 +98,16 @@ function mytheme_customize_register( $wp_customize ) {
 	$wp_customize->add_setting( 'theme_logo'    , array('transport' => 'refresh','type' => 'option'));
 
   /// ADD CONTROLS
-  $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'theme_logo', array(
-    'label' => 'Upload Logo',
+  $wp_customize->add_control( 'theme_logo', array(
+    'type' => 'textarea',
+    'label' => 'Paste SVG Logo',
     'section' => 'title_tagline',
     'settings' => 'theme_logo',
-  ) ) );
+  ) );
 
 }
 add_action( 'customize_register', 'mytheme_customize_register' );
+
+function consolelog($var) {
+  echo '<script type="text/javascript">console.log('.json_encode($var).');</script>';
+}

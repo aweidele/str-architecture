@@ -1,5 +1,20 @@
 var $ = jQuery;
 $(document).ready(function() {
+
+  //$('body').append('<div class="feedback"></div>');
+
+  //$('.feedback').html($(window).width());
+  //$(window).resize(function(){
+  //  $('.feedback').html($(window).width());
+  //});
+
+  if($('.body_frontpage_load').length) {
+
+    setTimeout(function() {
+      $('.body_frontpage_load').removeClass('body_frontpage_load');
+    },3000);
+  }
+
   var swiped = false;
 
   $('.str_project').each(function() {
@@ -11,6 +26,7 @@ $(document).ready(function() {
     var str_current = $(this).parents('.str_project').data('current');
     var str_this_slider = $(this).parent().siblings('.str_project_slider_container');
     var str_indicator = $(this).parent().siblings('.str_project_indicators');
+    var str_indicator_mobile = $(this).parent().siblings('.str_project_indicator_mobile');
     var str_slider_length = $('.str_slide',str_this_slider).length;
 
     str_current += $(this).index() ? 1 : -1;
@@ -26,6 +42,8 @@ $(document).ready(function() {
     $('.str_indicator',str_indicator).removeClass('active');
     $('.str_indicator:eq('+str_current+')',str_indicator).addClass('active');
 
+    $('.str_project_indicator_current',str_indicator_mobile).text(str_current + 1);
+
     $(this).parents('.str_project').data('current',str_current);
   });
 
@@ -34,6 +52,7 @@ $(document).ready(function() {
     var str_current = $(this).parents('.str_project').data('current');
     var str_this_slider = $(this).parent().siblings('.str_project_slider_container');
     var str_indicator = $(this).parent().siblings('.str_project_indicators');
+    var str_indicator_mobile = $(this).parent().siblings('.str_project_indicator_mobile');
     var str_infoslide = $('.str_slide.project_info',str_this_slider);
 
     str_current = str_infoslide.index();
@@ -43,6 +62,8 @@ $(document).ready(function() {
     $('.str_indicator',str_indicator).removeClass('active');
     $('.str_indicator:eq('+str_current+')',str_indicator).addClass('active');
 
+    $('.str_project_indicator_current',str_indicator_mobile).text(str_current + 1);
+
     $(this).parents('.str_project').data('current',str_current);
   });
 
@@ -50,6 +71,7 @@ $(document).ready(function() {
   $('.str_indicator').on('click',function() {
     var str_current = $(this).index();
     var str_this_slider = $(this).parent().siblings('.str_project_slider_container');
+    var str_indicator_mobile = $(this).parent().siblings('.str_project_indicator_mobile');
 
     $('.str_slide',str_this_slider).removeClass('active');
     $('.str_slide:eq('+str_current+')',str_this_slider).addClass('active');
@@ -57,64 +79,17 @@ $(document).ready(function() {
     $(this).siblings('.str_indicator').removeClass('active');
     $(this).addClass('active');
 
+    $('.str_project_indicator_current',str_indicator_mobile).text(str_current + 1);
+
     $(this).parents('.str_project').data('current',str_current);
   });
 
   /*** SWIPE ACTION ***/
-  $('.str_project_slider').swipe( {
-    swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
-      var str_current = $(this).parents('.str_project').data('current');
-      var str_this_slider = $(this).parent();
-      var str_indicator = $(this).parent().siblings('.str_project_indicators');
-      var str_slider_length = $('.str_slide',this).length;
-
-      // DETERMINE THE DIRECTION, GO FORWARD FOR LEFT, BACKWARD FOR RIGHT
-      if(direction == 'right') {
-        str_current--;
-        swiped = true;
-      } else if(direction == 'left')  {
-        str_current++;
-        swiped = true;
-      }
-
-      if(str_current < 0) {
-        str_current = str_slider_length - 1;
-      } else if (str_current >= str_slider_length) {
-        str_current = 0;
-      }
-
-      $('.str_slide',str_this_slider).removeClass('active');
-      $('.str_slide:eq('+str_current+')',str_this_slider).addClass('active');
-
-      $('.str_indicator',str_indicator).removeClass('active');
-      $('.str_indicator:eq('+str_current+')',str_indicator).addClass('active');
-
-      $(this).parents('.str_project').data('current',str_current);
-    }
-  }
-
-  /*** CLICK ACTION ***/
-  ).on('click',function(){
-    if(!swiped) {
-      var str_current = $(this).parents('.str_project').data('current');
-      var str_this_slider = $(this).parent();
-      var str_indicator = $(this).parent().siblings('.str_project_indicators');
-      var str_slider_length = $('.str_slide',this).length;
-
-      str_current++;
-      if (str_current >= str_slider_length) {
-        str_current = 0;
-      }
-
-      $('.str_slide',str_this_slider).removeClass('active');
-      $('.str_slide:eq('+str_current+')',str_this_slider).addClass('active');
-
-      $('.str_indicator',str_indicator).removeClass('active');
-      $('.str_indicator:eq('+str_current+')',str_indicator).addClass('active');
-
-      $(this).parents('.str_project').data('current',str_current);
-    }
-    swiped = false;
+  $('.str_project_slider').swipe({
+    swipeLeft:swipeGo,
+    swipeRight:swipeGo,
+    tap:tapGo,
+    allowPageScroll:"vertical"
   });
 
   /*** BACK TO TOP ***/
@@ -143,3 +118,46 @@ $(document).ready(function() {
   }));
 
 });
+
+function tapGo(event) {
+  thisSlide = $(this);
+  slideAdvance(thisSlide,'left');
+}
+
+function swipeGo(event, direction) {
+  thisSlide = $(this);
+  slideAdvance(thisSlide,direction);
+}
+
+function slideAdvance(thisSlide,direction) {
+  var str_current = thisSlide.parents('.str_project').data('current');
+  var str_this_slider = thisSlide.parent();
+  var str_indicator = thisSlide.parent().siblings('.str_project_indicators');
+  var str_indicator_mobile = thisSlide.parent().siblings('.str_project_indicator_mobile');
+  var str_slider_length = $('.str_slide',thisSlide).length;
+
+  // DETERMINE THE DIRECTION, GO FORWARD FOR LEFT, BACKWARD FOR RIGHT
+  if(direction == 'right') {
+    str_current--;
+  } else if(direction == 'left')  {
+    str_current++;
+  } else {
+    return false;
+  }
+
+  if(str_current < 0) {
+    str_current = str_slider_length - 1;
+  } else if (str_current >= str_slider_length) {
+    str_current = 0;
+  }
+
+  $('.str_slide',str_this_slider).removeClass('active');
+  $('.str_slide:eq('+str_current+')',str_this_slider).addClass('active');
+
+  $('.str_indicator',str_indicator).removeClass('active');
+  $('.str_indicator:eq('+str_current+')',str_indicator).addClass('active');
+
+  $('.str_project_indicator_current',str_indicator_mobile).text(str_current + 1);
+
+  thisSlide.parents('.str_project').data('current',str_current);
+}

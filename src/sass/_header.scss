@@ -1,13 +1,28 @@
 .header_logo {
-  max-width: 635px;
+  max-width: 359px;
   margin: auto;
   overflow: hidden;
+
+  a {
+    display: block;
+    padding: 25px 0 20px 0;
+  }
 
   span {
     @include position_off;
   }
 
-  img {
-    @include imgblock;
+  svg {
+    height: 67px;
+    width: 300px;
+
+    margin: auto;
+    display: block;
+    //transition: width $speed;
+
+    @media screen and (min-width: 401px) {
+      height: 80px;
+      width: 357px;
+    }
   }
 }

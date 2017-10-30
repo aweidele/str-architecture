@@ -3,6 +3,7 @@
   margin: auto;
   position: relative;
   margin-bottom: 50px;
+  user-select: none;
 
   &:first-child {
     margin-top: 50px;
@@ -61,21 +62,29 @@
 
   img {
     height: auto;
-    width: 100%;
+    width: auto;
+
+    max-height: 100%;
+    max-width: 100%;
+
+    position: relative;
+    top: 50%;
+    left: 50%;
+
     display: block;
+    transform: translate(-50%,-50%);
   }
 
   &.str_slide_portrait {
     img {
-      height: 100%;
-      width: auto;
-      margin: auto;
+      //height: 100%;
+      //width: auto;
+      //margin: auto;
     }
   }
 }
 
 .str_slide_download {
-  @extend %libre;
   height: 34px;
   position: absolute;
   bottom: 15px;
@@ -113,13 +122,21 @@
 }
 
 .str_slide_text {
-  //padding: 50px;
   position: relative;
   top: 50%;
-  transform: translateY(-50%);
 
-  @media screen and (min-width: 1000px) {
-    //padding: 100px;
+  max-height: 100%;
+  overflow: auto;
+  padding: 0 13px;
+  transform: translateY(-50%);
+  -webkit-overflow-scrolling: touch;
+
+  @media screen and (min-width: 640px) {
+    padding: 0 50px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 0;
   }
 
   .typography {
@@ -206,7 +223,7 @@
 }
 
 .str_indicator {
-  width: 9px;
+  width: 16px;
   height: 8px;
   display: inline-block;
   text-indent: -200%;
@@ -235,13 +252,12 @@
       background: #c61515;
   }
 
-  @media screen and (min-width: 700px) {
-    width: 16px;
+  @media screen and (max-width: 700px) {
+    display: none;
   }
 }
 
 .str_project_description {
-  @extend %libre;
   font-size: 14px;
   text-align: center;
   font-size: 14px;
@@ -261,7 +277,20 @@
     &.str_slider_info_link {
       font-style: normal;
       text-decoration: underline;
+      text-transform: uppercase;
       cursor: pointer;
     }
+  }
+}
+
+.str_project_indicator_mobile {
+  color: #c61515;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 0.5em 0 1em;
+  text-align: center;
+
+  @media screen and (min-width: 700px) {
+    display: none;
   }
 }

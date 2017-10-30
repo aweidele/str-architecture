@@ -1,0 +1,30 @@
+{
+  "name": "str-architecture",
+  "version": "1.0.0",
+  "description": "STR Architecture",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Hello!\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aweidele/str-architecture.git"
+  },
+  "author": "Weidele",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aweidele/str-architecture/issues"
+  },
+  "homepage": "https://github.com/aweidele/str-architecture#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-uglify": "^3.0.0",
+    "pump": "^1.0.2"
+  },
+  "dependencies": {
+    "jquery-touchswipe": "^1.6.15"
+  }
+}
