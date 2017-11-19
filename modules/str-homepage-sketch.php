@@ -19,9 +19,3 @@
 <?php } ?>
   </div>
 </div>
-<style type="text/css">
-<?php
-  $base_height = 815;
-  $base_width = 1800;
-?>
-</style>

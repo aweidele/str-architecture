@@ -1,6 +1,10 @@
 var $ = jQuery;
 $(document).ready(function() {
 
+  m = $(window).height();
+  m += " / " + $(window).width();
+  alert(m);
+
   //$('body').append('<div class="feedback"></div>');
 
   //$('.feedback').html($(window).width());
