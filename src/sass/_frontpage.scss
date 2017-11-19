@@ -68,9 +68,9 @@
     @include imgblock;
   }
 
-  @media screen and (min-width: 751px) {
+  //@media screen and (min-width: 751px) {
     display: none;
-  }
+  //}
 }
 
 // HOMEPAGE SKETCH
@@ -104,7 +104,7 @@ $tiles: (
   padding-bottom: percentage($base_height / $base_width);
 
   @media screen and (max-width: 751px) {
-    display: none;
+    //display: none;
   }
 }
 
