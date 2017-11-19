@@ -12,11 +12,13 @@ for($i=1;$i<17;$i++) {
   $sketch[] = get_field($field);
 }
 include('modules/str-homepage-sketch.php');
+/*
 ?>
 <div class="frontpage_mobile_sketch">
   <img src="<?php echo $mobile_sketch['url']; ?>">
 </div>
 <?php
+*/
 endwhile;
 endif;
 get_footer();
