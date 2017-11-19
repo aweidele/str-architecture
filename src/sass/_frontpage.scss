@@ -90,6 +90,7 @@ $tiles: (
     height: 421px;
 
     overflow: auto;
+    -webkit-overflow-scrolling: touch;
 
     .homepage_sketch_inner {
       height: 421px;
