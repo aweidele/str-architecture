@@ -58,21 +58,6 @@
   }
 }
 
-.frontpage_mobile_sketch {
-  height: calc(100vh - 196px);
-
-  overflow: hidden;
-  position: relative;
-
-  img {
-    @include imgblock;
-  }
-
-  //@media screen and (min-width: 751px) {
-    display: none;
-  //}
-}
-
 // HOMEPAGE SKETCH
 ////////////////////////////////////////////////////////////////////////////////
 $base_width: 1800px;
@@ -98,13 +83,27 @@ $tiles: (
 );
 
 .homepage_sketch {
-  max-height: calc(100vh - 183px);
   width: 100%;
   position: relative;
-  padding-bottom: percentage($base_height / $base_width);
 
-  @media screen and (max-width: 751px) {
-    //display: none;
+  @media screen and (max-width: 375px) {
+    height: 421px;
+
+    overflow: auto;
+
+    .homepage_sketch_inner {
+      height: 421px;
+      width: 877px;
+
+      position: relative;
+    }
+  }
+
+  @media screen and (min-width: 376px) {
+    height: auto;
+    max-height: calc(100vh - 183px);
+
+    padding-bottom: percentage($base_height / $base_width);
   }
 }
 
