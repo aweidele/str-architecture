@@ -87,17 +87,17 @@ $tiles: (
   position: relative;
 
   @media screen and (max-width: 375px) {
-    height: 421px;
-
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
-
-    .homepage_sketch_inner {
-      height: 421px;
-      width: 877px;
-
-      position: relative;
-    }
+    // height: 421px;
+    //
+    // overflow: auto;
+    // -webkit-overflow-scrolling: touch;
+    //
+    // .homepage_sketch_inner {
+    //   height: 421px;
+    //   width: 877px;
+    //
+    //   position: relative;
+    // }
   }
 
   @media screen and (min-width: 376px) {
@@ -161,17 +161,19 @@ $tiles: (
   transform: translate(-50%,-50%);
 }
 
-@for $i from 1 through length($tiles) {
-  $tile: nth($tiles, $i);
+@media screen and (min-width: 375px) {
+  @for $i from 1 through length($tiles) {
+    $tile: nth($tiles, $i);
 
-  $l: nth($tile, 1) * 1px;
-  $t: nth($tile, 2) * 1px;
-  $w: nth($tile, 3) * 1px;
+    $l: nth($tile, 1) * 1px;
+    $t: nth($tile, 2) * 1px;
+    $w: nth($tile, 3) * 1px;
 
-  .homepage_sketch_tile_#{$i} {
-    width: percentage($w / $base_width);
-    top: percentage($t / $base_height);
-    left: percentage($l / $base_width);
-    //background: rgb($b,$b,$b);
+    .homepage_sketch_tile_#{$i} {
+      width: percentage($w / $base_width);
+      top: percentage($t / $base_height);
+      left: percentage($l / $base_width);
+      //background: rgb($b,$b,$b);
+    }
   }
 }
