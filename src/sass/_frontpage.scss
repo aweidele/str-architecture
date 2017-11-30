@@ -63,6 +63,7 @@
 $base_width: 1800px;
 $base_height: 865px;
 
+// (left, top, width)
 $tiles: (
 	(61, 0, 424),
   (485, 0, 415),
@@ -85,8 +86,9 @@ $tiles: (
 $mbase_width: 375px;
 $mbase_height: 550px;
 
+// (left, top, width)
 $mtiles: (
-	(61, 0, 424),
+	(13, 66, 98),
   (485, 0, 415),
   (900, 0, 450),
   (1350, 0, 424),
@@ -123,6 +125,7 @@ $mtiles: (
 .homepage_sketch_tile {
   position: absolute;
   overflow: hidden;
+  transition: left 2s, top 2s;
 
   &:hover {
     .homepage_sketch_photo {
@@ -174,43 +177,21 @@ $mtiles: (
 }
 
 // PLACE THE TILES FOR MOBILE
-@for $i from 1 through length($tiles) {
-  $tile: nth($tiles, $i);
+@for $i from 1 through length($mtiles) {
+  $tile: nth($mtiles, $i);
 
   $l: nth($tile, 1) * 1px;
   $t: nth($tile, 2) * 1px;
   $w: nth($tile, 3) * 1px;
 
   .homepage_sketch_tile_#{$i} {
-    width: percentage($w / $base_width);
-    top: percentage($t / $base_height);
-    left: percentage($l / $base_width);
+    width: percentage($w / $mbase_width);
+    top: percentage($t / $mbase_height);
+    left: percentage($l / $mbase_width);
     //background: rgb($b,$b,$b);
   }
 }
 
-// PLACE THE TILES FOR DESKTOP
-$base_width: 1800px;
-$base_height: 865px;
-
-$tiles: (
-	(61, 0, 424),
-  (485, 0, 415),
-  (900, 0, 450),
-  (1350, 0, 424),
-  (672, 164, 228),
-  (61, 253, 424),
-  (485, 322, 415),
-  (900, 386, 450),
-  (1350, 439, 424),
-  (485, 514, 415),
-  (1350, 606, 424),
-  (61, 644, 312),
-  (373, 644, 377),
-  (750, 644, 371),
-  (1121, 644, 229),
-  (61, 448, 424),
-);
 
 @media screen and (min-width: 376px) {
   @for $i from 1 through length($tiles) {
