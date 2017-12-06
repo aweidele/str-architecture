@@ -112,6 +112,7 @@ $mtiles: (
   width: 100%;
   position: relative;
 
+  overflow: hidden;
   padding-bottom: percentage($mbase_height / $mbase_width);
 
   @media screen and (max-width: 375px) {
