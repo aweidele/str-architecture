@@ -82,9 +82,17 @@ function create_sider_post_type() {
     'menu_icon'           => 'dashicons-camera',
     'supports'            => array('title'),
     'has_archive'         => true,
+    'rewrite'								=> array(
+      'slug'                  => 'project',
+      'with_front'            => true,
+      'pages'                 => true,
+      'feeds'                 => true,
+    ),
   );
 
   register_post_type( 'str-slider' , $args );
+
+  //flush_rewrite_rules();
 
 }
 add_action( 'init', 'create_sider_post_type' );

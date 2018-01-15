@@ -95,7 +95,7 @@ $mtiles: (
   (116, 77, 128),
   (268, 290, 86),
   (18, 155, 101),
-  (210, 348, 159),
+  (205, 348, 159),
   (21, 286, 187),
   (13, 208, 185),
   (177, 422, 167),
@@ -111,7 +111,9 @@ $mtiles: (
   height: auto;
   width: 100%;
   position: relative;
+  left: -10px;
 
+  margin-bottom: 60px;
   overflow: hidden;
   padding-bottom: percentage($mbase_height / $mbase_width);
 
@@ -120,6 +122,8 @@ $mtiles: (
   }
 
   @media screen and (min-width: 376px) {
+    left: 0;
+    margin-bottom: 0;
     padding-bottom: percentage($base_height / $base_width);
   }
 }
@@ -182,9 +186,9 @@ $mtiles: (
 @for $i from 1 through length($mtiles) {
   $tile: nth($mtiles, $i);
 
-  $l: nth($tile, 1) * 1px;
-  $t: nth($tile, 2) * 1px;
-  $w: nth($tile, 3) * 1px;
+  $l: nth($tile, 1) * 1.04px;
+  $t: nth($tile, 2) * 1.04px;
+  $w: nth($tile, 3) * 1.04px;
 
   .homepage_sketch_tile_#{$i} {
     width: percentage($w / $mbase_width);

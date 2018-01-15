@@ -1,6 +1,5 @@
 <?php
 get_header();
-echo "HALLO!";
 if(have_posts()) : while(have_posts()) : the_post();
 $content = get_field('modules');
 foreach($content as $block) {
