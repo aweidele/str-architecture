@@ -24,6 +24,11 @@
 			top: 50%;
 			transform: translateY(-50%);
 		}
+
+		.navigation_row,
+		.main {
+			opacity: 0;
+		}
 	}
 
   @media screen and (min-width: 760px) {
@@ -41,10 +46,6 @@
     }
 
     &.body_frontpage_load {
-      .navigation_row,
-      .main {
-        opacity: 0;
-      }
 
       .header_logo {
         max-width: 1200px;
@@ -54,8 +55,6 @@
           width: 100%;
         }
       }
-
-
 
     }
   }
