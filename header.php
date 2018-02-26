@@ -49,7 +49,7 @@ echo file_get_contents( get_stylesheet_directory_uri() . '/images/logo.svg' );
     $c = 'body_frontpage';
     $c .= $first_visit ? ' body_frontpage_load' : '';
     //$c .= ' body_frontpage_load';
-    echo ' class="'.$c.'"';
+    //echo ' class="'.$c.'"';
   }
 
 ?>>
