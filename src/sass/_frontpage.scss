@@ -20,7 +20,7 @@
 	}
 
 	.navigation_row {
-		margin-top: 125px;
+		margin-top: 113px;
 		transition: opacity $speed;
 	}
 
@@ -44,6 +44,10 @@
     .logo_wrapper {
 
     }
+
+		.navigation_row {
+			margin-top: 125px;
+		}
 
     &.body_frontpage_load {
 
