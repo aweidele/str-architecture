@@ -13,6 +13,10 @@
 	.logo_wrapper {
 		transform: translateY(0);
 		transition: transform $speed / 2, top $speed / 2;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
 	}
 
 	&.body_frontpage_load {
@@ -24,11 +28,6 @@
 
   @media screen and (min-width: 760px) {
     .logo_wrapper {
-      width: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-
 
     }
 
