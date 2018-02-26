@@ -28,21 +28,17 @@
 		.navigation_row,
 		.main {
 			opacity: 0;
+			transition: opacity $speed;
+		}
+
+		.navigation_row {
+			margin-top: 125px;  
 		}
 	}
 
   @media screen and (min-width: 760px) {
     .logo_wrapper {
 
-    }
-
-    .navigation_row {
-      margin-top: 125px;
-      transition: opacity $speed;
-    }
-
-    .main {
-      transition: opacity $speed;
     }
 
     &.body_frontpage_load {
