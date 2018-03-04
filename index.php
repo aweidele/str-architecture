@@ -17,7 +17,12 @@ get_header();
       <?php
         if($feature_image) {
       ?>
-      <pre><?php print_r($feature_image); ?></pre>
+      <figure class="news_figure" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+        <meta itemprop="url" content="<?= $feature_image["sizes"]["image_module_content"] ?>">
+        <meta itemprop="width" content="<?= $feature_image["sizes"]["image_module_content-width"] ?>">
+        <meta itemprop="height" content="<?= $feature_image["sizes"]["image_module_content-height"] ?>">
+        <img src="<?= $feature_image["sizes"]["image_module_content"] ?>">
+      </figure>
       <?php
         }
       ?>

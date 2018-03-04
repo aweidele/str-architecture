@@ -3,9 +3,9 @@
 }
 
 .news_title {
-  font-size: 16px;
+  font-size: 21px;
   font-weight: 500;
-  margin-bottom: 0.4em;
+  margin-bottom: 16px;
   text-transform: uppercase;
 
   a {
@@ -18,4 +18,15 @@
   display: inline-block;
   margin-right: 10px;
   font-weight: 700;
+}
+
+.news_figure {
+  margin-bottom: 16px;
+
+  &,
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
 }
