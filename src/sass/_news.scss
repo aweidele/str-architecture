@@ -1,0 +1,21 @@
+.news_article {
+  margin-bottom: 2em;
+}
+
+.news_title {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 0.4em;
+  text-transform: uppercase;
+
+  a {
+    color: $black;
+    text-decoration: none;
+  }
+}
+
+.news_date {
+  display: inline-block;
+  margin-right: 10px;
+  font-weight: 700;
+}
