@@ -1,5 +1,46 @@
+.news_index_header {
+  background: #CCCCCC;
+  color: $white;
+  margin-bottom: 32px;
+}
+
+.news_index_header_title {
+  @include position_off;
+}
+
+.news_index_header_image {
+  max-width: 685px;
+  margin: auto;
+}
+
+.news_index_header_image_inner {
+  width: 100%;
+  position: relative;
+  padding-bottom: 18%;
+}
+
+.news_index_header_figure {
+  width: 100%;
+
+  position: absolute;
+  top: -3%;
+  left: 0;
+
+  padding: 0 13px;
+  svg {
+    fill: currentColor;
+  }
+}
+
 .news_article {
   margin-bottom: 2em;
+
+  .more-link {
+    color: $black;
+    text-decoration: none;
+    font-weight: 700;
+    font-style: italic;
+  }
 }
 
 .news_title {
