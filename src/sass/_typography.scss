@@ -52,4 +52,12 @@
     margin-bottom: 0.5em;
   }
 
+  a {
+    color: #333;
+
+    &:hover {
+      color: #000;
+    }
+  }
+
 }

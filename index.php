@@ -13,7 +13,7 @@ get_header();
 </header>
 <div class="row">
   <div class="image_cell_content">
-    <section class="str_section">
+    <section class="str_section news_wrapper">
 <?php
   if(have_posts()) : while(have_posts()) : the_post();
     $feature_image = get_field('feature_image');
@@ -44,6 +44,12 @@ get_header();
   endwhile;
   endif;
 ?>
+      <div class="news_navigation">
+        <div class="nav-previous alignleft"><?php next_posts_link( 'Older posts' ); ?></div>
+        <div class="nav-next alignright"><?php previous_posts_link( 'Newer posts' ); ?></div>
+      </div>
+    </section>
+
     </div>
   </div>
 </div>
