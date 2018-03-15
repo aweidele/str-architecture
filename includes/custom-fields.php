@@ -564,6 +564,11 @@ acf_add_local_field_group(array (
 				'operator' => '!=',
 				'value' => 'front_page',
 			),
+			array (
+				'param' => 'post_type',
+				'operator' => '!=',
+				'value' => 'news',
+			),
 		),
 	),
 	'menu_order' => 0,
@@ -2129,6 +2134,23 @@ acf_add_local_field_group(array (
 	'title' => 'News',
 	'fields' => array (
 		array (
+			'key' => 'field_5aaa5baac6c66',
+			'label' => 'Date',
+			'name' => 'date',
+			'type' => 'date_picker',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array (
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'display_format' => 'F j, Y',
+			'return_format' => 'n | j | Y',
+			'first_day' => 0,
+		),
+		array (
 			'key' => 'field_5a9c5ddc8fc85',
 			'label' => 'Feature Image',
 			'name' => 'feature_image',
@@ -2158,7 +2180,7 @@ acf_add_local_field_group(array (
 			array (
 				'param' => 'post_type',
 				'operator' => '==',
-				'value' => 'post',
+				'value' => 'news',
 			),
 		),
 	),

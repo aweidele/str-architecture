@@ -92,7 +92,45 @@ function create_sider_post_type() {
 
   register_post_type( 'str-slider' , $args );
 
-  //flush_rewrite_rules();
+  $labels = array(
+    'name'                => _x('News', 'post type general name'),
+    'singular_name'       => _x('News', 'post type singular name'),
+    'archives'            => __( 'News' ),
+    'add_new'             => _x('Add News', 'portfolio item'),
+    'add_new_item'        => __('Add News'),
+    'edit_item'           => __('Edit News'),
+    'new_item'            => __('New News'),
+    'view_item'           => __('View News'),
+    'search_items'        => __('Search News'),
+    'not_found'           =>  __('Nothing found'),
+    'not_found_in_trash'  => __('Nothing found in Trash'),
+    'parent_item_colon'   => ''
+  );
+
+  $args = array(
+    'labels'              => $labels,
+    'public'              => true,
+    'publicly_queryable'  => true,
+    'show_ui'             => true,
+    'query_var'           => true,
+    'capability_type'     => 'post',
+    'hierarchical'        => false,
+    'menu_position'       => null,
+    'menu_icon'           => 'dashicons-admin-site',
+    'has_archive'         => true,
+    'show_in_nav_menus'   => true,
+    'supports'            => array('title', 'editor', 'page-attributes'),
+    // 'rewrite'								=> array(
+    //   'slug'                  => 'n',
+    //   'with_front'            => true,
+    //   'pages'                 => true,
+    //   'feeds'                 => true,
+    // ),
+  );
+
+  register_post_type( 'news' , $args );
+
+  flush_rewrite_rules();
 
 }
 add_action( 'init', 'create_sider_post_type' );
