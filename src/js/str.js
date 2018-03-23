@@ -133,7 +133,7 @@ function windowResize() {
   $winWidth = $(window).width();
   $winHeight = $(window).height();
   if($(".news_navigation").length) {
-    $news_nav = $(".news_navigation").offset().top + $winHeight;
+    $news_nav = $(".news_navigation").offset().top - $winHeight;
   }
 }
 
