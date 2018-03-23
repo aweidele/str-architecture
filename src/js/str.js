@@ -130,9 +130,10 @@ $(document).ready(function() {
 });
 
 function windowResize() {
+  $winWidth = $(window).width();
+  $winHeight = $(window).height();
   if($(".news_navigation").length) {
-    $news_nav = $(".news_navigation").offset().top;
-
+    $news_nav = $(".news_navigation").offset().top + $winHeight;
   }
 }
 
