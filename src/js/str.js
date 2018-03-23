@@ -130,7 +130,7 @@ $(document).ready(function() {
   $(".nav-previous a").on("click",function(e) {
     e.preventDefault();
     h = $(this).attr("href");
-    alert(h);
+    $(".news_wrapper").load(h+" .news_wrapper");
   });
 
 });
