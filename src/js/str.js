@@ -131,7 +131,7 @@ $(document).ready(function() {
     e.preventDefault();
     h = $(this).attr("href");
     $.ajax({
-      url: h
+      url: h + " .news_wrapper"
     }).done(function(m) {
       console.log(m);
     });
