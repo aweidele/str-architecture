@@ -135,6 +135,17 @@ function create_sider_post_type() {
 }
 add_action( 'init', 'create_sider_post_type' );
 
+
+add_action( 'pre_get_posts', 'custom_get_posts' );
+function custom_get_posts( $query ) {
+
+  if( (is_category() || is_archive()) && $query->is_main_query() ) {
+    $query->query_vars['orderby'] = 'menu_order';
+    $query->query_vars['order'] = 'ASC';
+  }
+
+}
+
 /*
 THEME CUSTOMIZATION SETTINGS
 */
