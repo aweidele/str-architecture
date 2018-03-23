@@ -129,6 +129,10 @@ $(document).ready(function() {
 
 });
 
+$(window).load(function() {
+  windowResize();
+});
+
 function windowResize() {
   $winWidth = $(window).width();
   $winHeight = $(window).height();
