@@ -127,15 +127,15 @@ $(document).ready(function() {
     windowScroll();
   });
 
-  $(".nav-previous a").on("click",function(e) {
-    e.preventDefault();
-    h = $(this).attr("href");
-    $.ajax({
-      url: h + " .news_wrapper"
-    }).done(function(m) {
-      console.log(m);
-    });
-  });
+  // $(".nav-previous a").on("click",function(e) {
+  //   e.preventDefault();
+  //   h = $(this).attr("href");
+  //   $.ajax({
+  //     url: h + " .news_wrapper"
+  //   }).done(function(m) {
+  //     console.log(m);
+  //   });
+  // });
 
 });
 
