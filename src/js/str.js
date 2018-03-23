@@ -116,7 +116,26 @@ $(document).ready(function() {
     }
   }));
 
+  windowResize();
+  windowScroll();
+
+  $(window).on("resize",function() {
+    windowResize();
+  });
+
+  $(window).on("scroll",function() {
+    windowScroll();
+  });
+
 });
+
+function windowResize() {
+  console.log("resize");
+}
+
+function windowScroll() {
+  console.log("scroll");
+}
 
 function tapGo(event) {
   thisSlide = $(this);
