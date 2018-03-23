@@ -61,3 +61,14 @@ $bold: 600;
 .svg_hidden {
   display: none;
 }
+
+
+#feedback {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: black;
+  z-index: 9999;
+  font-size: 12px;
+  color: white;
+}

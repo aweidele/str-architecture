@@ -55,5 +55,6 @@ get_header();
     </div>
   </div>
 </div>
+<div id="feedback">Feedback</div>
 <?php
 get_footer();

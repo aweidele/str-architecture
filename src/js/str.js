@@ -130,11 +130,15 @@ $(document).ready(function() {
 });
 
 function windowResize() {
-  console.log("resize");
+  if($(".news_navigation").length) {
+    $news_nav = $(".news_navigation").offset().top;
+
+  }
 }
 
 function windowScroll() {
-  console.log("scroll");
+  $scrollTop = $(window).scrollTop();
+  $("#feedback").html($news_nav + "<br>" + $scrollTop);
 }
 
 function tapGo(event) {
