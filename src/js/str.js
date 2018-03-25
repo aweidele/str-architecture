@@ -122,12 +122,19 @@ $(document).ready(function() {
   });
 
   $(".news_wrapper").addClass("scroll_load");
-  
+
   if($(".news_navigation").length) {
     $newsNext = $(".nav-previous a").attr("href");
     $newsScrolling = true;
     newsNextClick();
   }
+
+  if($(".more-link").length() {
+    $(".more-link").on("click",function(e) {
+      e.preventDefault();
+      $(this).parents(".news_article").addClass("content_expanded");
+    })
+  });
 
 });
 

@@ -42,6 +42,20 @@
     font-weight: 700;
     font-style: italic;
   }
+
+  .content_full {
+    display: none;
+  }
+
+  &.content_expanded {
+    .content_full {
+      display: block;
+    }
+
+    .content_preview {
+      display: none;
+    }
+  }
 }
 
 .news_title {
