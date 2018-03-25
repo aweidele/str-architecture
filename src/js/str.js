@@ -122,6 +122,7 @@ $(document).ready(function() {
   });
 
   $(".news_wrapper").addClass("scroll_load");
+  
   if($(".news_navigation").length) {
     $newsNext = $(".nav-previous a").attr("href");
     $newsScrolling = true;
