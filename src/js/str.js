@@ -129,12 +129,12 @@ $(document).ready(function() {
     newsNextClick();
   }
 
-  if($(".more-link").length() {
+  if($(".more-link").length) {
     $(".more-link").on("click",function(e) {
       e.preventDefault();
       $(this).parents(".news_article").addClass("content_expanded");
-    })
-  });
+    });
+  }
 
 });
 
