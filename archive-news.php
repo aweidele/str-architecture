@@ -20,7 +20,8 @@ get_header();
     $feature_image = get_field('feature_image');
     $date = get_field("date");
 ?>
-    <article class="news_article" id="<?=$post->post_name?>" itemscope itemtype="http://schema.org/NewsArticle">
+    <!-- article class="news_article" id="<?=$post->post_name?>" itemscope itemtype="http://schema.org/NewsArticle" -->
+      <article class="news_article" itemscope itemtype="http://schema.org/NewsArticle">
       <meta itemprop="datePublished" content="<?php echo get_the_date("c"); ?>"/>
       <meta itemprop="dateModified" content="<?php echo get_the_date("c"); ?>"/>
       <header class="news_header">
@@ -39,7 +40,23 @@ get_header();
         }
       ?>
       <main class="typography">
-        <?php the_content("Read More"); ?>
+        <?php
+          $pos=strpos($post->post_content, '<!--more-->');
+          if($pos) {
+            $unfiltered_content = str_replace( '<!--more-->', '', $post->post_content );
+            $filtered_content = apply_filters( 'the_content', $unfiltered_content );
+        ?>
+        <div class="content_preview">
+          <?php the_content("Read More"); ?>
+        </div>
+        <div class="content_full">
+          <?php echo $filtered_content; ?>
+        </div>
+        <?php
+          } else {
+            the_content();
+          }
+        ?>
       </main>
     </article>
 <?php
