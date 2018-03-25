@@ -86,4 +86,8 @@
       color: #000;
     }
   }
+
+  .scroll_load & {
+    @include position_off;
+  }
 }

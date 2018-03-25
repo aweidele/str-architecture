@@ -1,11 +1,5 @@
 var $ = jQuery;
 $(document).ready(function() {
-  //$('body').append('<div class="feedback"></div>');
-
-  //$('.feedback').html($(window).width());
-  //$(window).resize(function(){
-  //  $('.feedback').html($(window).width());
-  //});
 
   if($('.body_frontpage_load').length) {
 
@@ -127,15 +121,12 @@ $(document).ready(function() {
     windowScroll();
   });
 
-  // $(".nav-previous a").on("click",function(e) {
-  //   e.preventDefault();
-  //   h = $(this).attr("href");
-  //   $.ajax({
-  //     url: h + " .news_wrapper"
-  //   }).done(function(m) {
-  //     console.log(m);
-  //   });
-  // });
+  $(".news_wrapper").addClass("scroll_load");
+  if($(".news_navigation").length) {
+    $newsNext = $(".nav-previous a").attr("href");
+    $newsScrolling = true;
+    newsNextClick();
+  }
 
 });
 
@@ -146,13 +137,16 @@ $(window).load(function() {
 function windowResize() {
   $winWidth = $(window).width();
   $winHeight = $(window).height();
-  if($(".news_navigation").length) {
-    $news_nav = $(".news_navigation").offset().top - $winHeight;
-  }
 }
 
 function windowScroll() {
   $scrollTop = $(window).scrollTop();
+  if($(".news_navigation").length) {
+    $news_nav = $(".news_wrapper .news_article").last().offset().top - $winHeight;
+    if($scrollTop > $news_nav && $newsNext != false && $newsScrolling) {
+      loadNextNews();
+    }
+  }
   $("#feedback").html($news_nav + "<br>" + $scrollTop);
 }
 
@@ -197,4 +191,31 @@ function slideAdvance(thisSlide,direction) {
   $('.str_project_indicator_current',str_indicator_mobile).text(str_current + 1);
 
   thisSlide.parents('.str_project').data('current',str_current);
+}
+
+function loadNextNews() {
+  $newsScrolling = false;
+  $.get($newsNext, function(data) {
+    var posts = $(".news_wrapper .news_article", data);
+    var nav = $(".news_wrapper .news_navigation", data);
+
+    $(".news_navigation").remove();
+
+    $(".news_wrapper").append(posts);
+    $(".news_wrapper").append(nav);
+
+    if($(".nav-previous a").length) {
+      $newsNext = $(".nav-previous a").attr("href");
+      $newsScrolling = true;
+    } else {
+      $newsNext = false;
+    }
+  });
+}
+
+function newsNextClick() {
+  $(".nav-previous a").on("click",function(e) {
+    e.preventDefault();
+    loadNextNews();
+  });
 }
