@@ -212,6 +212,12 @@ function loadNextNews() {
     $(".news_wrapper").append(posts);
     $(".news_wrapper").append(nav);
 
+    $(".more-link").off("click","**")
+      .on("click",function(e) {
+        e.preventDefault();
+        $(this).parents(".news_article").addClass("content_expanded");
+      });
+
     if($(".nav-previous a").length) {
       $newsNext = $(".nav-previous a").attr("href");
       $newsScrolling = true;

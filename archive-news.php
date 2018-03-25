@@ -46,7 +46,7 @@ get_header();
             $unfiltered_content = str_replace( '<!--more-->', '', $post->post_content );
             $filtered_content = apply_filters( 'the_content', $unfiltered_content );
         ?>
-        <div class="content_preview">
+        <div class="content_preview" aria-hidden="true">
           <?php the_content("Read More"); ?>
         </div>
         <div class="content_full">
