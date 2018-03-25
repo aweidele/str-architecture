@@ -20,7 +20,7 @@ get_header();
     $feature_image = get_field('feature_image');
     $date = get_field("date");
 ?>
-    <article class="news_article" itemscope itemtype="http://schema.org/NewsArticle">
+    <article class="news_article" id="<?=$post->post_name?>" itemscope itemtype="http://schema.org/NewsArticle">
       <meta itemprop="datePublished" content="<?php echo get_the_date("c"); ?>"/>
       <meta itemprop="dateModified" content="<?php echo get_the_date("c"); ?>"/>
       <header class="news_header">
