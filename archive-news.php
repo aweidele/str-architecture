@@ -62,11 +62,27 @@ get_header();
 <?php
   endwhile;
   endif;
+
+  $next_link = get_next_posts_link( 'Older posts' );
+  $prev_link = get_previous_posts_link( 'Newer posts' );
+
+  if($next_link || $prev_link) {
 ?>
       <div class="news_navigation">
+        <?php if($next_link) { ?>
         <div class="nav-previous alignleft"><?php next_posts_link( 'Older posts' ); ?></div>
+        <?php
+          }
+          if($prev_link) {
+        ?>
         <div class="nav-next alignright"><?php previous_posts_link( 'Newer posts' ); ?></div>
+        <?php
+          }
+        ?>
       </div>
+<?php
+  }
+?>
     </section>
 
     </div>
