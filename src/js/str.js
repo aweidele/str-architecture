@@ -155,7 +155,7 @@ function windowScroll() {
       loadNextNews();
     }
   }
-  $("#feedback").html($news_nav + "<br>" + $scrollTop);
+  //$("#feedback").html($news_nav + "<br>" + $scrollTop);
 }
 
 function tapGo(event) {
