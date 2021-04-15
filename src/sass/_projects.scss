@@ -1,8 +1,16 @@
+$p: 42px;
+
 .str_project {
   max-width: 1200px;
+  width: 100%;
   margin: auto;
   margin-bottom: 50px;
-  user-select: none;
+  position: relative;
+  padding: 0 10px;
+
+  @media screen and (min-width: 640px) {
+    padding: 0 $p;
+  }
 
   &:first-child {
     margin-top: 50px;
@@ -11,6 +19,138 @@
   &:last-child {
     margin-bottom: 100px;
   }
+
+  .owl-dots {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 16px -6px;
+    padding: 0 40px;
+  }
+
+  .owl-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    margin: 4px 6px;
+    background: #707070;
+    transition: all .25s;
+
+    &:hover,
+    &:active {
+      background: darken(#c61515,20);
+    }
+
+    &.active {
+      background: #c61515;
+    }
+
+    &.active {
+
+    }
+
+  }
+
+  figcaption {
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    font-size: 12px;
+    padding: 20px 0 0 0;
+  }
+
+  .owl-prev,
+  .owl-next {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: calc(50% - 16px);
+    text-indent: -999999px;
+
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .owl-prev {
+    left: -#{$p};
+  }
+
+  .owl-next {
+    right: -#{$p};
+  }
+}
+
+.str_slider_image {
+  position: relative;
+  padding-bottom: 80%;
+
+  @media screen and (min-width: 700px) {
+    padding-bottom: 60%;
+  }
+
+  @media screen and (min-width: 700px) and (max-height: 825px) {
+    padding-bottom: 43%;
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.str_slide_type {
+  height: 100%;
+  width: 100%;
+  max-width: 800px;
+  overflow: auto;
+  margin: auto;
+}
+
+.str_slide_download {
+  height: 34px;
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+
+  background: rgba(0,0,0,0.7);
+  color: #FFFFFF;
+  display: inline-block;
+  font-size: 10px;
+  opacity: 0;
+  padding: 5px 20px 11px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transform: translateX(-50%);
+  transition: opacity 0.5s;
+  z-index: 10;
+
+  .str_slide:hover & {
+    opacity: 1;
+  }
+
+  @media screen and (max-width: 640px) {
+    display: none;
+  }
+}
+
+.icon-download {
+  fill: #ffffff;
+  width: 16px;
+  height: 16px;
+  position: relative;
+  top: 2px;
+  display: inline-block;
+  margin-right: 5px;
 }
 //
 // .str_project_slider_container {
@@ -85,42 +225,7 @@
 //   }
 // }
 //
-// .str_slide_download {
-//   height: 34px;
-//   position: absolute;
-//   bottom: 15px;
-//   left: 50%;
-//
-//   background: rgba(0,0,0,0.7);
-//   color: #FFFFFF;
-//   display: inline-block;
-//   font-size: 10px;
-//   opacity: 0;
-//   padding: 5px 20px 11px;
-//   text-decoration: none;
-//   text-transform: uppercase;
-//   transform: translateX(-50%);
-//   transition: opacity 0.5s;
-//   z-index: 10;
-//
-//   .str_slide:hover & {
-//     opacity: 1;
-//   }
-//
-//   @media screen and (max-width: 640px) {
-//     display: none;
-//   }
-// }
-//
-// .icon-download {
-//   fill: #ffffff;
-//   width: 16px;
-//   height: 16px;
-//   position: relative;
-//   top: 2px;
-//   display: inline-block;
-//   margin-right: 5px;
-// }
+
 //
 // .str_slide_text {
 //   position: relative;
@@ -286,31 +391,31 @@
 //   }
 // }
 //
-// .str_project_description {
-//   font-size: 14px;
-//   text-align: center;
-//   font-size: 14px;
-//
-//   h3 {
-//     font-size: 14px;
-//     font-weight: 300;
-//     text-transform: uppercase;
-//     margin-bottom: 1em;
-//   }
-//
-//   p {
-//     font-size: 14px;
-//     font-style: italic;
-//     margin-bottom: 0.4em;
-//
-//     &.str_slider_info_link {
-//       font-style: normal;
-//       text-decoration: underline;
-//       text-transform: uppercase;
-//       cursor: pointer;
-//     }
-//   }
-// }
+.str_project_description {
+  font-size: 14px;
+  text-align: center;
+  font-size: 14px;
+
+  h3 {
+    font-size: 14px;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+  }
+
+  p {
+    font-size: 14px;
+    font-style: italic;
+    margin-bottom: 0.4em;
+
+    &.str_slider_info_link {
+      font-style: normal;
+      text-decoration: underline;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+  }
+}
 //
 // .str_project_indicator_mobile {
 //   color: #c61515;

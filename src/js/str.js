@@ -10,7 +10,25 @@ $(document).ready(function() {
 
   var swiped = false;
 
-  
+  /*** SLIDER ***/
+  $('.str_slider').owlCarousel({
+    'items':1,
+    'loop':true,
+    'lazyLoad':true,
+    'responsive': {
+      0: {
+        'nav': false
+      },
+      640: {
+        'nav': true
+      }
+    },
+    'navText': [
+      "<div class='str_previous'>Prev<svg viewBox='0 0 32 32'><use xlink:href='#arrow_left'></use></svg></div>",
+      "<div class='str_next'>Next<svg viewBox='0 0 32 32'><use xlink:href='#arrow_right'></use></svg></div>"
+    ],
+    'mouseDrag':false
+  });
 
   /*** BACK TO TOP ***/
   $(window).on('scroll',function() {

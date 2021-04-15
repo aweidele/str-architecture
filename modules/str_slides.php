@@ -27,11 +27,42 @@ foreach($block_text_slides as $slide) {
 <section class="str_project"<?php echo $block_name ? ' id="'.$block_name.'"' : ''; ?>>
   <div class="str_slider owl-carousel">
 <?php foreach($slides as $slide) { ?>
-
+    <div class="str_slide">
+        <?php
+          if($slide[type] == 'image') {
+            $orientation = get_field('orientation',$slide['ID']);
+            $size = 'STR Slider' . ($orientation == 'portrait' ? ' Portrait' : '');
+        ?>
+          <figure>
+            <div class="str_slider_image">
+              <img data-src="<?php echo $slide['sizes'][$size]; ?>" alt="<?php echo $slide['alt']; ?>" src="<?php echo $slide['sizes'][$size]; ?>" alt="<?php echo $slide['alt']; ?>">
+              <a href="<?php echo $slide['url']; ?>" class="str_slide_download" target="_blank">
+                <svg viewbox="0 0 32 32" class="icon-download"><use xlink:href="#download"></use></svg>
+              <?php //_e('Download'); ?></a>
+            </div>
+            <?php if($slide['caption'] != '') { ?>
+            <figcaption><?php echo $slide['caption']; ?></figcaption>
+            <?php } ?>
+          </figure>
+        <?php } else { ?>
+          <div class="str_slide_type typography">
+            <?php echo $slide['text']; ?>
+          </div>
+        <?php } ?>
+    </div>
 <?php } ?>
   </div>
 
-  <pre><?php print_r($slides); ?></pre>
+  <div class="str_project_description">
+  <?php if($block_title) { ?>
+      <h3><?php echo $block_title; ?></h3>
+  <?php } ?>
+
+      <?php echo wpautop($block_description); ?>
+  <?php if($jumpset) { ?>
+      <p class="str_slider_info_link">Info</p>
+  <?php } ?>
+  </div>
 </section>
 <?php /*
 <section class="str_project"<?php echo $block_name ? ' id="'.$block_name.'"' : ''; ?>>
