@@ -41,7 +41,7 @@ foreach($block_text_slides as $slide) {
               <?php //_e('Download'); ?></a>
             </div>
             <?php if($slide['caption'] != '') { ?>
-            <figcaption><?php echo $slide['caption']; ?></figcaption>
+            <figcaption><?php echo wpautop($slide['caption']); ?></figcaption>
             <?php } ?>
           </figure>
         <?php } else { ?>
