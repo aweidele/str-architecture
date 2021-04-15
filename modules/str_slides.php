@@ -40,6 +40,9 @@ foreach($slides as $j => $slide) {
             <a href="<?php echo $slide['url']; ?>" class="str_slide_download" target="_blank">
               <svg viewbox="0 0 32 32" class="icon-download"><use xlink:href="#download"></use></svg>
               <?php //_e('Download'); ?></a>
+            <?php if($slide['caption'] != '') { ?>
+            <p><?php echo nl2br($slide['caption']); ?></p>
+            <?php } ?>
           </div>
         <?php } else { ?>
           <div class="str_slide_text">
