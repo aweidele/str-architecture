@@ -25,6 +25,16 @@ foreach($block_text_slides as $slide) {
 }
 ?>
 <section class="str_project"<?php echo $block_name ? ' id="'.$block_name.'"' : ''; ?>>
+  <div class="str_slider owl-carousel">
+<?php foreach($slides as $slide) { ?>
+
+<?php } ?>
+  </div>
+
+  <pre><?php print_r($slides); ?></pre>
+</section>
+<?php /*
+<section class="str_project"<?php echo $block_name ? ' id="'.$block_name.'"' : ''; ?>>
   <div class="str_project_slider_container">
     <div class="str_project_slider">
 <?php
@@ -83,3 +93,5 @@ $i++;
     <div class="str_next">Next<svg viewbox="0 0 32 32"><use xlink:href="#arrow_right"></use></svg></div>
   </div>
 </section>
+*/
+?>
