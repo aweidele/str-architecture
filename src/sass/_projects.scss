@@ -111,9 +111,32 @@ $p: 42px;
 .str_slide_type {
   height: 100%;
   width: 100%;
-  max-width: 800px;
   overflow: auto;
   margin: auto;
+
+  > div {
+    position: relative;
+    padding-bottom: 80%;
+
+    @media screen and (min-width: 700px) {
+      padding-bottom: 60%;
+    }
+
+    @media screen and (min-width: 700px) and (max-height: 825px) {
+      padding-bottom: 43%;
+    }
+  }
+
+  .typography {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    overflow: auto;
+    max-width: 1000px;
+    transform: translateX(-50%);
+  }
 }
 
 .str_slide_download {

@@ -45,8 +45,12 @@ foreach($block_text_slides as $slide) {
             <?php } ?>
           </figure>
         <?php } else { ?>
-          <div class="str_slide_type typography">
-            <?php echo $slide['text']; ?>
+          <div class="str_slide_type">
+            <div>
+              <div class="typography">
+                <?php echo $slide['text']; ?>
+              </div>
+            </div>
           </div>
         <?php } ?>
     </div>
