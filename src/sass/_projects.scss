@@ -8,6 +8,24 @@ $p: 42px;
   position: relative;
   padding: 0 10px;
 
+  .placeholder {
+    padding-bottom: 80%;
+
+    @media screen and (min-width: 700px) {
+      padding-bottom: 60%;
+    }
+
+    @media screen and (min-width: 700px) and (max-height: 825px) {
+      padding-bottom: 43%;
+    }
+  }
+
+  &.inview {
+    .placeholder {
+      display: none;
+    }
+  }
+
   @media screen and (min-width: 640px) {
     padding: 0 $p;
   }
