@@ -1,19 +1,24 @@
 <?php
 $jumpslide = -1;
 $jumpset = false;
+$jumpslide_position = -1;
 
 $slides = array();
 foreach ($block_slides as $i => $slide) {
   $slide['type'] = 'image';
   $slides[] = $slide;
 }
-foreach($block_text_slides as $slide) {
+foreach($block_text_slides as $i => $slide) {
   $slide['type'] = 'text';
   if($slide['text'] != '') {
 
     if($slide['project_info_slide'] == 1 && !$jumpset) {
       $slide['jumpslide'] = 1;
       $jumpset = true;
+
+      if($slide['slide_position'] != '') {
+        $jumpslide_position = $slide['slide_position'];
+      }
     }
 
     if($slide['slide_position'] != '') {
@@ -23,7 +28,57 @@ foreach($block_text_slides as $slide) {
     }
   }
 }
+
+if($jumpslide_position == -1) {
+  $jumpslide_position = sizeof($slides) - 1;
+}
 ?>
+<section class="str_project"<?php echo $block_name ? ' id="'.$block_name.'"' : ''; ?>>
+  <div class="placeholder"></div>
+  <div class="str_slider owl-carousel outview"<?php if ($jumpset) { ?> data-jumpslide="<?php echo $jumpslide_position; ?>"<?php } ?>>
+<?php foreach($slides as $slide) { ?>
+    <div class="str_slide">
+        <?php
+          if($slide[type] == 'image') {
+            $orientation = get_field('orientation',$slide['ID']);
+            $size = 'STR Slider' . ($orientation == 'portrait' ? ' Portrait' : '');
+        ?>
+          <figure>
+            <div class="str_slider_image">
+              <img data-src="<?php echo $slide['sizes'][$size]; ?>" alt="<?php echo $slide['alt']; ?>">
+              <a href="<?php echo $slide['url']; ?>" class="str_slide_download" target="_blank">
+                <svg viewbox="0 0 32 32" class="icon-download"><use xlink:href="#download"></use></svg>
+              <?php //_e('Download'); ?></a>
+            </div>
+            <?php if($slide['caption'] != '') { ?>
+            <figcaption><?php echo wpautop($slide['caption']); ?></figcaption>
+            <?php } ?>
+          </figure>
+        <?php } else { ?>
+          <div class="str_slide_type">
+            <div>
+              <div class="typography">
+                <?php echo $slide['text']; ?>
+              </div>
+            </div>
+          </div>
+        <?php } ?>
+    </div>
+<?php } ?>
+  </div>
+
+  <div class="str_project_description">
+  <?php if($block_title) { ?>
+      <h3><?php echo $block_title; ?></h3>
+  <?php } ?>
+
+      <?php echo wpautop($block_description); ?>
+  <?php if($jumpset) { ?>
+      <button class="str_slider_info_link">Info</button>
+  <?php } ?>
+  </div>
+</section>
+<?php /*
 <section class="str_project"<?php echo $block_name ? ' id="'.$block_name.'"' : ''; ?>>
   <div class="str_project_slider_container">
     <div class="str_project_slider">
@@ -83,3 +138,5 @@ $i++;
     <div class="str_next">Next<svg viewbox="0 0 32 32"><use xlink:href="#arrow_right"></use></svg></div>
   </div>
 </section>
+*/
+?>
