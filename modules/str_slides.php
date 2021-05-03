@@ -1,19 +1,24 @@
 <?php
 $jumpslide = -1;
 $jumpset = false;
+$jumpslide_position = -1;
 
 $slides = array();
 foreach ($block_slides as $i => $slide) {
   $slide['type'] = 'image';
   $slides[] = $slide;
 }
-foreach($block_text_slides as $slide) {
+foreach($block_text_slides as $i => $slide) {
   $slide['type'] = 'text';
   if($slide['text'] != '') {
 
     if($slide['project_info_slide'] == 1 && !$jumpset) {
       $slide['jumpslide'] = 1;
       $jumpset = true;
+
+      if($slide['slide_position'] != '') {
+        $jumpslide_position = $slide['slide_position'];
+      }
     }
 
     if($slide['slide_position'] != '') {
@@ -23,10 +28,14 @@ foreach($block_text_slides as $slide) {
     }
   }
 }
+
+if($jumpslide_position == -1) {
+  $jumpslide_position = sizeof($slides) - 1;
+}
 ?>
 <section class="str_project"<?php echo $block_name ? ' id="'.$block_name.'"' : ''; ?>>
   <div class="placeholder"></div>
-  <div class="str_slider owl-carousel outview">
+  <div class="str_slider owl-carousel outview"<?php if ($jumpset) { ?> data-jumpslide="<?php echo $jumpslide_position; ?>"<?php } ?>>
 <?php foreach($slides as $slide) { ?>
     <div class="str_slide">
         <?php
@@ -65,7 +74,7 @@ foreach($block_text_slides as $slide) {
 
       <?php echo wpautop($block_description); ?>
   <?php if($jumpset) { ?>
-      <p class="str_slider_info_link">Info</p>
+      <button class="str_slider_info_link">Info</button>
   <?php } ?>
   </div>
 </section>

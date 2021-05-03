@@ -448,13 +448,15 @@ $p: 42px;
     font-size: 14px;
     font-style: italic;
     margin-bottom: 0.4em;
+  }
 
-    &.str_slider_info_link {
-      font-style: normal;
-      text-decoration: underline;
-      text-transform: uppercase;
-      cursor: pointer;
-    }
+  button.str_slider_info_link {
+    font-style: normal;
+    text-decoration: underline;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 14px;
   }
 }
 //

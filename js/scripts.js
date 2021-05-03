@@ -3420,6 +3420,14 @@ function sliderInit(carousel) {
     ],
     'mouseDrag':false
   });
+
+  $('.str_slider_info_link').on('click', function(e) {
+    e.preventDefault();
+    var thisSlider = $(this).parent().siblings('.str_slider');
+    var jumpSlide = thisSlider.data('jumpslide');
+    // alert(jumpSlide);
+    thisSlider.trigger('to.owl.carousel', jumpSlide);
+  });
 }
 
 function fb() {
