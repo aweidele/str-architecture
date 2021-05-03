@@ -1,3 +1,6 @@
+@import "../../node_modules/owl.carousel2/src/scss/owl.carousel.scss";
+@import "../../node_modules/owl.carousel2/src/scss/owl.theme.default.scss";
+
 @import 'setup';
 @import 'structure';
 @import 'typography';
@@ -10,3 +13,25 @@
 @import 'footer';
 @import 'frontpage';
 @import 'news';
+
+#feedback2 {
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+  z-index: 9999999;
+  background: rgba(black,.8);
+  color: white;
+  font-size: 10px;
+  padding: 5px;
+}
+
+#feedback3 {
+  position: fixed;
+  left: 50px;
+  bottom: 10px;
+  z-index: 9999999;
+  background: rgba(black,.8);
+  color: white;
+  font-size: 10px;
+  padding: 5px;
+}
