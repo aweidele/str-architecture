@@ -154,6 +154,12 @@ function sliderInit(carousel) {
     // alert(jumpSlide);
     thisSlider.trigger('to.owl.carousel', jumpSlide);
   });
+
+  $('.str_slider_image img', carousel).on('click', function(e) {
+    e.preventDefault();
+    var thisSlider = $(this).parents('.str_slider');
+    thisSlider.trigger('next.owl.carousel');
+  });
 }
 
 function fb() {
