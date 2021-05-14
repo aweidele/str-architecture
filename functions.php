@@ -8,19 +8,14 @@ include_once('includes/custom-fields.php');
 ENQUEUE SCRIPTS AND STYLES
 */
 function str_enqueue_styles() {
-  wp_enqueue_style( 'str_fonts',
-      '//fonts.googleapis.com/css?family=Libre+Franklin:300,300i,600,600i|PT+Sans+Narrow:700'
-  );
+  // wp_enqueue_style( 'str_fonts',
+  //     '//fonts.googleapis.com/css?family=Libre+Franklin:300,300i,600,600i|PT+Sans+Narrow:700'
+  // );
 
   wp_enqueue_style( 'str_main_style',
-      get_stylesheet_directory_uri() . '/css/str.css'
-  );
-
-  wp_enqueue_script( 'touchSwipe',
-      get_stylesheet_directory_uri() . '/js/jquery.touchSwipe.min.js',
-      array('jquery'),
-      wp_get_theme()->get('Version'),
-      true
+      get_stylesheet_directory_uri() . '/css/str.css',
+      array(),
+      wp_get_theme()->get('Version')
   );
 
   wp_enqueue_script( 'str_main_script',
