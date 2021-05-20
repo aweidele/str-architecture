@@ -44,27 +44,50 @@ $p: 42px;
     flex-wrap: wrap;
     margin: 16px -6px;
     padding: 0 40px;
+    counter-reset: owldots;
+    font-size: 12px;
+    font-weight: 600;
+    color: #707070;
+
+    &:after {
+      content: "/ " counter(owldots);
+      display: inline-block;
+    }
   }
 
   .owl-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 4px;
-    margin: 4px 6px;
-    background: #707070;
-    transition: all .25s;
+    counter-increment: owldots;
+    @media screen and (max-width: 699.9px) {
 
-    &:hover,
-    &:active {
-      background: darken(#c61515,20);
+      &:not(.active) {
+        @include  position_off;
+      }
+      &:before {
+        content: counter(owldots);
+        display: inline-block;
+        margin-right: 4px;
+      }
     }
+    @media screen and (min-width: 700px) {
+      width: 8px;
+      height: 8px;
+      border-radius: 4px;
+      margin: 4px 6px;
+      background: #707070;
+      transition: all .25s;
 
-    &.active {
-      background: #c61515;
-    }
+      &:hover,
+      &:active {
+        background: darken(#c61515,20);
+      }
 
-    &.active {
+      &.active {
+        background: #c61515;
+      }
 
+      &.active {
+
+      }
     }
 
   }

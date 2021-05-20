@@ -32,6 +32,11 @@ $bold: 600;
 @mixin position_off {
   position: absolute;
   left: -999999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  margin: -1px 0 0 -1px;
+  display: inline-block;
 }
 
 @mixin imgblock {
