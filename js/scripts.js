@@ -3355,6 +3355,12 @@ $(document).ready(function() {
     });
   }
 
+  if( $('.str_slider').length ) {
+    $('.str_slider').each(function() {
+      sliderInit( $(this) );
+    });
+  }
+
 });
 $winWidth = 0;
 $winHeight = 0;
@@ -3380,18 +3386,18 @@ function windowScroll() {
     }
   }
 
-  if( $('.str_slider.outview').length ) {
-    $('.str_slider.outview').each(function() {
-      var p = $(this).parents('.str_project');
-      var o = p.offset().top;
-      var v = o - $winHeight;
-      if( $scrollTop > v ) {
-        sliderInit( $(this) );
-        p.addClass('inview');
-        $(this).removeClass('outview');
-      }
-    });
-  }
+  // if( $('.str_slider.outview').length ) {
+  //   $('.str_slider.outview').each(function() {
+  //     var p = $(this).parents('.str_project');
+  //     var o = p.offset().top;
+  //     var v = o - $winHeight;
+  //     if( $scrollTop > v ) {
+  //       sliderInit( $(this) );
+  //       p.addClass('inview');
+  //       $(this).removeClass('outview');
+  //     }
+  //   });
+  // }
 
   fb();
 }

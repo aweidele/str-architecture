@@ -34,7 +34,6 @@ if($jumpslide_position == -1) {
 }
 ?>
 <section class="str_project"<?php echo $block_name ? ' id="'.$block_name.'"' : ''; ?>>
-  <div class="placeholder"></div>
   <div class="str_slider owl-carousel outview"<?php if ($jumpset) { ?> data-jumpslide="<?php echo $jumpslide_position; ?>"<?php } ?>>
 <?php foreach($slides as $slide) { ?>
     <div class="str_slide">
@@ -45,7 +44,7 @@ if($jumpslide_position == -1) {
         ?>
           <figure>
             <div class="str_slider_image">
-              <img data-src="<?php echo $slide['sizes'][$size]; ?>" alt="<?php echo $slide['alt']; ?>">
+              <img src="<?php echo $slide['sizes'][$size]; ?>" alt="<?php echo $slide['alt']; ?>">
               <a href="<?php echo $slide['url']; ?>" class="str_slide_download" target="_blank">
                 <svg viewbox="0 0 32 32" class="icon-download"><use xlink:href="#download"></use></svg>
               <?php //_e('Download'); ?></a>
