@@ -1,7 +1,6 @@
 <?php
 get_header();
 ?>
-?
 <header class="news_index_header">
   <div class="news_index_header_title">News</div>
   <div class="news_index_header_image">
