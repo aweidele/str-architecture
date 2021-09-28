@@ -57,6 +57,12 @@ foreach($block_text_slides as $slide) {
 <?php } ?>
   </div>
 
+  <div class="str_project_mobile">
+    <a href="<?php echo get_permalink($block['project']); ?>">
+      <img data-src="<?php echo $slides[0]['sizes'][$size]; ?>" alt="<?php echo $slides[0]['alt']; ?>" src="<?php echo $slides[0]['sizes'][$size]; ?>" alt="<?php echo $block_title; ?>">
+    </a>
+  </div>
+
   <div class="str_project_description">
   <?php if($block_title) { ?>
       <h3><?php echo $block_title; ?></h3>
@@ -66,6 +72,7 @@ foreach($block_text_slides as $slide) {
   <?php if($jumpset) { ?>
       <p class="str_slider_info_link">Info</p>
   <?php } ?>
+      <p class="str_slider_mobile_link"><a href="<?php echo get_permalink($block['project']); ?>" aria-label="Open full project: <?php echo $block_title; ?>">Open full project</a></p>
   </div>
 </section>
 <?php /*
