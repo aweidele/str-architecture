@@ -72,7 +72,7 @@ $i++;
       $size = 'STR Slider' . ($orientation == 'portrait' ? ' Portrait' : '');
 
     ?>
-    <a href="<?php echo $block_slides[0]['link']; ?>"><img src="<?php echo $firstSlide['sizes'][$size]; ?>"></a>
+    <a href="<?php echo get_permalink()"><img src="<?php echo $firstSlide['sizes'][$size]; ?>"></a>
   </div>
 
   <div class="str_project_description">
