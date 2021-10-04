@@ -21,35 +21,60 @@ $p: 42px;
   }
 
   .owl-dots {
+    counter-reset: dotcount;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    margin: 16px -6px;
-    padding: 0 40px;
+    font-weight: bold;
+    font-size: 12px;
+    margin: .4em 0;
+
+    &:after {
+
+      content: "/" counter(dotcount);
+    }
   }
 
   .owl-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 4px;
-    margin: 4px 6px;
-    background: #707070;
-    transition: all .25s;
 
-    &:hover,
-    &:active {
-      background: darken(#c61515,20);
+    &:not(.active) {
+      @include srOnly;
     }
-
-    &.active {
-      background: #c61515;
+    span:after {
+      counter-increment: dotcount;
+      content: counter(dotcount);
     }
-
-    &.active {
-
-    }
-
   }
+
+  // .owl-dots {
+  //   display: flex;
+  //   justify-content: center;
+  //   flex-wrap: wrap;
+  //   margin: 16px -6px;
+  //   padding: 0 40px;
+  // }
+  //
+  // .owl-dot {
+  //   width: 8px;
+  //   height: 8px;
+  //   border-radius: 4px;
+  //   margin: 4px 6px;
+  //   background: #707070;
+  //   transition: all .25s;
+  //
+  //   &:hover,
+  //   &:active {
+  //     background: darken(#c61515,20);
+  //   }
+  //
+  //   &.active {
+  //     background: #c61515;
+  //   }
+  //
+  //   &.active {
+  //
+  //   }
+  //
+  // }
 
   figcaption {
     text-align: center;
