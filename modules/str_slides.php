@@ -65,6 +65,16 @@ $i++;
 <?php } ?>
     <div class="str_indicator_total"> / <?php echo sizeof($slides); ?></div>
   </div>
+  <div class="str_project_mobile">
+    <?php
+      $firstSlide = $slides[0];
+      $orientation = get_field('orientation',$firstSlide['ID']);
+      $size = 'STR Slider' . ($orientation == 'portrait' ? ' Portrait' : '');
+
+    ?>
+    <a href="<?php echo $block_slides[0]['link']; ?>"><img src="<?php echo $firstSlide['sizes'][$size]; ?>"></a>
+  </div>
+
   <div class="str_project_description">
 
 <?php if($block_title) { ?>
@@ -81,3 +91,4 @@ $i++;
     <div class="str_next">Next<svg viewbox="0 0 32 32"><use xlink:href="#arrow_right"></use></svg></div>
   </div>
 </section>
+<pre><?php print_r($block_slides); ?></pre>

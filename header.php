@@ -50,8 +50,9 @@ echo file_get_contents( get_stylesheet_directory_uri() . '/images/logo.svg' );
     $c .= $first_visit ? ' body_frontpage_load' : '';
     //$c .= ' body_frontpage_load';
     echo ' class="'.$c.'"';
+  } else {
+    echo ' class="'.$post->post_type.'"';
   }
-
 ?>>
 <header class="header">
   <div class="logo_wrapper">
