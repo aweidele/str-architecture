@@ -304,6 +304,23 @@
   }
 }
 
+.str_slider_mobile_link {
+  text-align: center;
+  text-transform: uppercase;
+
+  a {
+    color: black;
+  }
+
+  .str-slider & {
+    display: none;
+  }
+
+  @media screen and (min-width: 800px) {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 800px) {
   .page {
     .str_project_slider_container,
