@@ -72,7 +72,7 @@ $i++;
       $size = 'STR Slider' . ($orientation == 'portrait' ? ' Portrait' : '');
 
     ?>
-    <a href="<?php echo get_permalink()"><img src="<?php echo $firstSlide['sizes'][$size]; ?>"></a>
+    <a href="<?php echo get_permalink($block['project']); ?>"><img src="<?php echo $firstSlide['sizes'][$size]; ?>"></a>
   </div>
 
   <div class="str_project_description">
@@ -91,4 +91,3 @@ $i++;
     <div class="str_next">Next<svg viewbox="0 0 32 32"><use xlink:href="#arrow_right"></use></svg></div>
   </div>
 </section>
-<pre><?php print_r($block_slides); ?></pre>

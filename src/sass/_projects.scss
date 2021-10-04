@@ -295,7 +295,22 @@
     height: auto;
   }
 
+  .str-slider & {
+    display: none;
+  }
+
   @media screen and (min-width: 800px) {
     display: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .page {
+    .str_project_slider_container,
+    .str_project_indicators,
+    .str_project_controls,
+    .str_slider_info_link {
+      display: none;
+    }
   }
 }
