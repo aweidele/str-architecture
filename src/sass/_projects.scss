@@ -248,41 +248,16 @@
 }
 
 .str_project_indicators {
-  text-align: center;
   padding: 6px 0 12px;
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
 }
 
 .str_indicator {
-  width: 16px;
-  height: 8px;
-  display: inline-block;
-  text-indent: -200%;
-  overflow: hidden;
-  position: relative;
-  cursor: pointer;
-
-  &:after {
-    content: "";
-    display: table;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background-color: #707070;
-    position: absolute;
-    left: 0;
-    top: 0;
-    transition: background 0.5s;
-  }
-
-  &:hover:after {
-      background: darken(#c61515,30);
-  }
-
-  &.active:after {
-      background: #c61515;
-  }
-
-  @media screen and (max-width: 700px) {
+  margin-right: .3em;
+  &:not(.active) {
     display: none;
   }
 }
@@ -310,17 +285,5 @@
       text-transform: uppercase;
       cursor: pointer;
     }
-  }
-}
-
-.str_project_indicator_mobile {
-  color: #c61515;
-  font-size: 11px;
-  font-weight: 700;
-  padding: 0.5em 0 1em;
-  text-align: center;
-
-  @media screen and (min-width: 700px) {
-    display: none;
   }
 }

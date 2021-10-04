@@ -61,11 +61,9 @@ $i++;
   </div>
   <div class="str_project_indicators">
 <?php for($i=0;$i<sizeof($slides);$i++) { ?>
-    <div class="str_indicator<?php echo !$i ? ' active' : ''; ?>"><?php echo $i; ?></div>
+    <div class="str_indicator<?php echo !$i ? ' active' : ''; ?>"><?php echo $i + 1; ?></div>
 <?php } ?>
-  </div>
-  <div class="str_project_indicator_mobile">
-    <span class="str_project_indicator_current">1</span> / <?php echo sizeof($slides); ?>
+    <div class="str_indicator_total"> / <?php echo sizeof($slides); ?></div>
   </div>
   <div class="str_project_description">
 

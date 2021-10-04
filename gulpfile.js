@@ -35,8 +35,8 @@ gulp.task('compress', function (cb) {
 });
 
 gulp.task('watch', function(){
-  gulp.watch('src/sass/**/*.scss', ['sass']);
-  gulp.watch('src/js/**/*.js', ['compress']);
+  gulp.watch('src/sass/**/*.scss', gulp.series('sass'));
+  gulp.watch('src/js/**/*.js', gulp.series('compress'));
 });
 
-gulp.task('default', ['sass', 'compress', 'watch']);
+gulp.task('default', gulp.series('sass', 'compress', 'watch'));
