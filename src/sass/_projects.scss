@@ -309,7 +309,9 @@
 }
 
 .str_project_mobile_title {
-
+  a {
+    color: black;
+  }
 }
 
 @media screen and (min-width: 800px) {
