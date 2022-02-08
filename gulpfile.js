@@ -1,9 +1,16 @@
 var gulp = require('gulp');
-var sass = require('gulp-sass');
+var sass = require('gulp-sass')(require('node-sass'));
 var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
 var uglify = require('gulp-uglify');
+var concat = require('gulp-concat');
+var rename = require('gulp-rename');
 var pump = require('pump');
+
+var jsQueue = [
+  'node_modules/owl.carousel2/dist/owl.carousel.js',
+  'src/js/*.js'
+];
 
 var sassOptions = {
   errLogToConsole: true,
@@ -24,14 +31,13 @@ gulp.task('sass', function(){
     .pipe(gulp.dest('css/'))
 });
 
-gulp.task('compress', function (cb) {
-  pump([
-        gulp.src('src/js/*.js'),
-        uglify(),
-        gulp.dest('js')
-    ],
-    cb
-  );
+gulp.task('compress', function() {
+  return gulp.src(jsQueue)
+    .pipe(concat('scripts.js'))
+    .pipe(gulp.dest('js'))
+    .pipe(rename('str.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('js'));
 });
 
 gulp.task('watch', function(){
