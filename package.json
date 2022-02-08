@@ -25,7 +25,9 @@
     "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.2",
     "jquery-touchswipe": "^1.6.19",
+    "node-sass": "^7.0.1",
     "owl.carousel": "^2.3.4",
+    "owl.carousel2": "^2.2.2",
     "pump": "^3.0.0"
   }
 }

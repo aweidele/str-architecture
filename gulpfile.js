@@ -1,5 +1,5 @@
 var gulp = require('gulp');
-var sass = require('gulp-sass');
+var sass = require('gulp-sass')(require('node-sass'));
 var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
 var uglify = require('gulp-uglify');
@@ -41,8 +41,8 @@ gulp.task('compress', function() {
 });
 
 gulp.task('watch', function(){
-  gulp.watch('src/sass/**/*.scss', ['sass']);
-  gulp.watch('src/js/**/*.js', ['compress']);
+  gulp.watch('src/sass/**/*.scss', gulp.series('sass'));
+  gulp.watch('src/js/**/*.js', gulp.series('compress'));
 });
 
-gulp.task('default', ['sass', 'compress', 'watch']);
+gulp.task('default', gulp.series('sass', 'compress', 'watch'));
