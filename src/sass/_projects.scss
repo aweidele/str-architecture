@@ -304,6 +304,24 @@
   }
 }
 
+.str_project_desktop_title {
+  display: none;
+}
+
+.str_project_mobile_title {
+
+}
+
+@media screen and (min-width: 800px) {
+  .str_project_desktop_title {
+    display: block;
+  }
+
+  .str_project_mobile_title {
+    display: none;
+  }
+}
+
 .str_slider_mobile_link {
   text-align: center;
   text-transform: uppercase;

@@ -78,7 +78,8 @@ $i++;
   <div class="str_project_description">
 
 <?php if($block_title) { ?>
-    <h3><?php echo $block_title; ?></h3>
+    <h3 class="str_project_desktop_title"><?php echo $block_title; ?></h3>
+    <h3 class="str_project_mobile_title"><a href="<?php echo get_permalink($block['project']); ?>"><?php echo $block_title; ?></a></h3>
 <?php } ?>
 
     <?php echo wpautop($block_description); ?>
@@ -86,7 +87,7 @@ $i++;
     <p class="str_slider_info_link">Info</p>
 <?php } ?>
   </div>
-  <p class="str_slider_mobile_link"><a href="<?php echo get_permalink($block['project']); ?>">View Project</a></p>
+  <!-- p class="str_slider_mobile_link"><a href="<?php echo get_permalink($block['project']); ?>">View Project</a></p -->
   <div class="str_project_controls">
     <div class="str_previous">Prev<svg viewbox="0 0 32 32"><use xlink:href="#arrow_left"></use></svg></div>
     <div class="str_next">Next<svg viewbox="0 0 32 32"><use xlink:href="#arrow_right"></use></svg></div>
