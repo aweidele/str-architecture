@@ -31,7 +31,7 @@
   }
 
   @media screen and (max-width: 800px) {
-    &.project-slider {
+    .page &.project-slider {
       &,
       ~ .str_project_indicators,
       ~ .str_project_controls,
