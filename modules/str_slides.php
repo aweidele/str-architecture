@@ -65,6 +65,7 @@ $i++;
 <?php } ?>
     <div class="str_indicator_total"> / <?php echo sizeof($slides); ?></div>
   </div>
+  <?php if( in_array('project-slider', $block_classlist) ) { ?>
   <div class="str_project_mobile">
     <?php
       $firstSlide = $slides[0];
@@ -74,7 +75,7 @@ $i++;
     ?>
     <a href="<?php echo get_permalink($block['project']); ?>"><img src="<?php echo $firstSlide['sizes'][$size]; ?>"></a>
   </div>
-
+  <?php } ?>
   <div class="str_project_description">
 
 <?php if($block_title) { ?>
