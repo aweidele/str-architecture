@@ -88,7 +88,6 @@ $i++;
     <p class="str_slider_info_link">Info</p>
 <?php } ?>
   </div>
-  <!-- p class="str_slider_mobile_link"><a href="<?php echo get_permalink($block['project']); ?>">View Project</a></p -->
   <div class="str_project_controls">
     <div class="str_previous">Prev<svg viewbox="0 0 32 32"><use xlink:href="#arrow_left"></use></svg></div>
     <div class="str_next">Next<svg viewbox="0 0 32 32"><use xlink:href="#arrow_right"></use></svg></div>
