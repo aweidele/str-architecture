@@ -34,7 +34,7 @@ foreach($slides as $j => $slide) {
   $size = 'STR Slider' . ($orientation == 'portrait' ? ' Portrait' : '');
   ?>
       <div class="str_slide<?php echo !$i ? ' active' : ''; ?><?php echo isset($slide['jumpslide']) ? ' project_info' : ''; ?>">
-        <?php if($slide[type] == 'image') { ?>
+        <?php if($slide['type'] == 'image') { ?>
           <div class="str_slide_image<?php echo $orientation == 'portrait' ? ' str_slide_portrait' : ''; ?>">
             <img src="<?php echo $slide['sizes'][$size]; ?>">
             <a href="<?php echo $slide['url']; ?>" class="str_slide_download" target="_blank">
